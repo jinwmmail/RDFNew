@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Tree>
+    <TreeNode Text="中国" Expanded="true" NodeId="China">
+        <TreeNode Text="河南省" Expanded="true" NodeId="henan">
+            <TreeNode Text="驻马店市"  NodeId="zhumadian"  />
+            <TreeNode Text="漯河市" NodeId="luohe"  />
+        </TreeNode>
+        <TreeNode Text="安徽省" Expanded="true" NodeId="anhui">
+            <TreeNode Text="合肥市" NodeId="hefei" Icon="ApplicationForm">
+                <TreeNode Text="金色池塘小区"  NodeId="golden" >
+                </TreeNode>
+            </TreeNode>
+        </TreeNode>
+    </TreeNode>
+</Tree>

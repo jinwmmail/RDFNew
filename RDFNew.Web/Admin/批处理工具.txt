@@ -1,0 +1,47 @@
+﻿
+/**以下生成单表数据处理代码****************************************************/
+
+Declare @TName Varchar(50),@TCaption Varchar(50),@CName Varchar(50),@SetStatus Varchar(4000),
+		@FillData Varchar(4000),@SetData Varchar(4000),@ListData Varchar(4000),@DetailData Varchar(4000)
+Select  @TName='Sys_Log',@SetStatus='',@FillData='',@SetData='',@ListData='',@DetailData=''
+
+DECLARE Gmbd_Cur CURSOR FOR  
+	Select a.[Name],convert(varchar(250), isnull(b.[value],''))
+	From syscolumns a
+		Left join sysproperties b On b.ID=a.ID and b.SmallID=a.ColID
+	where a.id=object_id(@TName) 
+	Order By a.colorder	
+OPEN Gmbd_Cur
+FETCH NEXT FROM Gmbd_Cur  INTO @CName,@TCaption
+WHILE @@FETCH_STATUS = 0
+BEGIN
+	Select @SetStatus=@SetStatus+'this.txt'+@CName+'.Readonly = B_Action.ToLower() == "view";'+char(10)
+
+	Select @FillData=@FillData+'this.txt'+@CName+'.Text = String.Format("{0}", dr["'+@CName+'"]);'+char(10)
+
+	Select @SetData=@SetData+'dr["'+@CName+'"] = App_Com.Helper.InputText(this.txt'+@CName+'.Text, 500);'+char(10)
+
+	Select @ListData=@ListData+'<x:BoundField DataField="'+@CName+'" SortField="'+@TName+'.'+@CName+'" HeaderText="'+@TCaption+'" />'+char(10)
+
+	Select @DetailData=@DetailData+
+                            '<x:FormRow>'+char(10)+
+                            '    <Items>'+char(10)+
+                            '        <x:TextBox ID="txt'+@CName+'" runat="server" Text="" Label="'+@TCaption+'" NextFocusControl="">'+char(10)+
+                            '        </x:TextBox>'+char(10)+
+                            '    </Items>'+char(10)+
+                            '</x:FormRow>'+char(10)
+
+   FETCH NEXT FROM Gmbd_Cur  INTO @CName,@TCaption
+END
+CLOSE Gmbd_Cur
+DEALLOCATE Gmbd_Cur
+
+Print @SetStatus
+Print '**********************************************'
+Print @FillData
+Print '**********************************************'
+Print @SetData
+Print '**********************************************'
+Print @ListData
+Print '**********************************************'
+Print @DetailData

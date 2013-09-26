@@ -1,0 +1,670 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D8CA299-3B5C-4F5A-9164-D0784FAD62F1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RDFNew.Web</RootNamespace>
+    <AssemblyName>RDFNew.Web</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DS.XBPM.API, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_Lib\XBPM\DS.XBPM.API.dll</HintPath>
+    </Reference>
+    <Reference Include="DS.XBPM.Design.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_Lib\XBPM\WebControls\DS.XBPM.Design.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DS.XBPM.REF, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_Lib\XBPM\DS.XBPM.REF.dll</HintPath>
+    </Reference>
+    <Reference Include="dswbu, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_Lib\XBPM\WebControls\dswbu.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport, Version=1.7.4.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_FastReport.Net-1.7.4\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Bars, Version=1.7.4.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_FastReport.Net-1.7.4\FastReport.Bars.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Web, Version=1.7.4.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_FastReport.Net-1.7.4\FastReport.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="FineUI, Version=3.3.0.0, Culture=neutral, PublicKeyToken=0ff1835d01c384a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_Lib\FineUI\FineUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_Lib\FineUI\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Bas\Employee\Bas_Employee.aspx.cs">
+      <DependentUpon>Bas_Employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bas\Employee\Bas_Employee.aspx.designer.cs">
+      <DependentUpon>Bas_Employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bas\Employee\Bas_EmployeeList.aspx.cs">
+      <DependentUpon>Bas_EmployeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bas\Employee\Bas_EmployeeList.aspx.designer.cs">
+      <DependentUpon>Bas_EmployeeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bas\Employee\Bas_EmployeeListPrint.aspx.cs">
+      <DependentUpon>Bas_EmployeeListPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bas\Employee\Bas_EmployeeListPrint.aspx.designer.cs">
+      <DependentUpon>Bas_EmployeeListPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Flow\Job\Flow_Job.aspx.cs">
+      <DependentUpon>Flow_Job.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Flow\Job\Flow_Job.aspx.designer.cs">
+      <DependentUpon>Flow_Job.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Flow\Job\Flow_JobList.aspx.cs">
+      <DependentUpon>Flow_JobList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Flow\Job\Flow_JobList.aspx.designer.cs">
+      <DependentUpon>Flow_JobList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bas\Dept\Bas_Dept.aspx.cs">
+      <DependentUpon>Bas_Dept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bas\Dept\Bas_Dept.aspx.designer.cs">
+      <DependentUpon>Bas_Dept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bas\Dept\Bas_DeptList.aspx.cs">
+      <DependentUpon>Bas_DeptList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bas\Dept\Bas_DeptList.aspx.designer.cs">
+      <DependentUpon>Bas_DeptList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\FMonth\Sys_FMonth.aspx.cs">
+      <DependentUpon>Sys_FMonth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\FMonth\Sys_FMonth.aspx.designer.cs">
+      <DependentUpon>Sys_FMonth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\FMonth\Sys_FMonthList.aspx.cs">
+      <DependentUpon>Sys_FMonthList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\FMonth\Sys_FMonthList.aspx.designer.cs">
+      <DependentUpon>Sys_FMonthList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\FMonth\Sys_FMonthListPrint.aspx.cs">
+      <DependentUpon>Sys_FMonthListPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\FMonth\Sys_FMonthListPrint.aspx.designer.cs">
+      <DependentUpon>Sys_FMonthListPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\Function\Sys_Function.aspx.cs">
+      <DependentUpon>Sys_Function.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\Function\Sys_Function.aspx.designer.cs">
+      <DependentUpon>Sys_Function.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\Function\Sys_FunctionList.aspx.cs">
+      <DependentUpon>Sys_FunctionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\Function\Sys_FunctionList.aspx.designer.cs">
+      <DependentUpon>Sys_FunctionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\Function\Sys_FunctionListPrint.aspx.cs">
+      <DependentUpon>Sys_FunctionListPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\Function\Sys_FunctionListPrint.aspx.designer.cs">
+      <DependentUpon>Sys_FunctionListPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\Menu\Sys_Menu.aspx.cs">
+      <DependentUpon>Sys_Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\Menu\Sys_Menu.aspx.designer.cs">
+      <DependentUpon>Sys_Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\Menu\Sys_MenuList.aspx.cs">
+      <DependentUpon>Sys_MenuList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\Menu\Sys_MenuList.aspx.designer.cs">
+      <DependentUpon>Sys_MenuList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\Module\Sys_Module.aspx.cs">
+      <DependentUpon>Sys_Module.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\Module\Sys_Module.aspx.designer.cs">
+      <DependentUpon>Sys_Module.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\Module\Sys_ModuleList.aspx.cs">
+      <DependentUpon>Sys_ModuleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\Module\Sys_ModuleList.aspx.designer.cs">
+      <DependentUpon>Sys_ModuleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\Notice\Sys_Notice.aspx.cs">
+      <DependentUpon>Sys_Notice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\Notice\Sys_Notice.aspx.designer.cs">
+      <DependentUpon>Sys_Notice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\Notice\Sys_NoticeList.aspx.cs">
+      <DependentUpon>Sys_NoticeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\Notice\Sys_NoticeList.aspx.designer.cs">
+      <DependentUpon>Sys_NoticeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\Role\Sys_Role.aspx.cs">
+      <DependentUpon>Sys_Role.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\Role\Sys_Role.aspx.designer.cs">
+      <DependentUpon>Sys_Role.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\Role\Sys_RoleList.aspx.cs">
+      <DependentUpon>Sys_RoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\Role\Sys_RoleList.aspx.designer.cs">
+      <DependentUpon>Sys_RoleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\User\Sys_User.aspx.cs">
+      <DependentUpon>Sys_User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\User\Sys_User.aspx.designer.cs">
+      <DependentUpon>Sys_User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\User\Sys_UserInfo.aspx.cs">
+      <DependentUpon>Sys_UserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\User\Sys_UserInfo.aspx.designer.cs">
+      <DependentUpon>Sys_UserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\User\Sys_UserList.aspx.cs">
+      <DependentUpon>Sys_UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\User\Sys_UserList.aspx.designer.cs">
+      <DependentUpon>Sys_UserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\User\Sys_UserPwd.aspx.cs">
+      <DependentUpon>Sys_UserPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\User\Sys_UserPwd.aspx.designer.cs">
+      <DependentUpon>Sys_UserPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Com\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Com\PageSingle.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Com\Helper.cs" />
+    <Compile Include="App_Com\ImageHelper.cs" />
+    <Compile Include="App_Com\Number2Chinese.cs" />
+    <Compile Include="App_Com\Number2English.cs" />
+    <Compile Include="App_Com\PageListSingle.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Com\Sys_User.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UEditor\net\Uploader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RDFNew.Module\RDFNew.Module.csproj">
+      <Project>{AD8A31EA-9C46-44A7-B466-B237ED329971}</Project>
+      <Name>RDFNew.Module</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Bas\Employee\Bas_Employee.aspx" />
+    <Content Include="Admin\Bas\Employee\Bas_EmployeeList.aspx" />
+    <Content Include="Admin\Bas\Employee\Bas_EmployeeListPrint.aspx" />
+    <Content Include="Admin\Flow\Job\Flow_Job.aspx" />
+    <Content Include="Admin\Flow\Job\Flow_JobList.aspx" />
+    <Content Include="Admin\Bas\Dept\Bas_Dept.aspx" />
+    <Content Include="Admin\Bas\Dept\Bas_DeptList.aspx" />
+    <Content Include="Admin\Sys\FMonth\Sys_FMonth.aspx" />
+    <Content Include="Admin\Sys\FMonth\Sys_FMonthList.aspx" />
+    <Content Include="Admin\Sys\FMonth\Sys_FMonthListPrint.aspx" />
+    <Content Include="Admin\Sys\Function\Sys_Function.aspx" />
+    <Content Include="Admin\Sys\Function\Sys_FunctionList.aspx" />
+    <Content Include="Admin\Sys\Function\Sys_FunctionListPrint.aspx" />
+    <Content Include="Admin\Sys\Menu\Sys_Menu.aspx" />
+    <Content Include="Admin\Sys\Menu\Sys_MenuList.aspx" />
+    <Content Include="Admin\Sys\Module\Sys_Module.aspx" />
+    <Content Include="Admin\Sys\Module\Sys_ModuleList.aspx" />
+    <Content Include="Admin\Sys\Notice\Sys_Notice.aspx" />
+    <Content Include="Admin\Sys\Notice\Sys_NoticeList.aspx" />
+    <Content Include="Admin\Sys\Role\Sys_Role.aspx" />
+    <Content Include="Admin\Sys\Role\Sys_RoleList.aspx" />
+    <Content Include="Admin\Sys\User\Sys_User.aspx" />
+    <Content Include="Admin\Sys\User\Sys_UserInfo.aspx" />
+    <Content Include="Admin\Sys\User\Sys_UserList.aspx" />
+    <Content Include="Admin\Sys\User\Sys_UserPwd.aspx" />
+    <None Include="Admin\模板Detail.txt" />
+    <None Include="Admin\模板List.txt" />
+    <Content Include="Admin\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Admin\Bas\Employee\Bas_EmployeeList.aspx.frx" />
+    <Content Include="Admin\Pur\PoM\Pur_PoMList.aspx.frx" />
+    <Content Include="Admin\Pur\PoM\Pur_PoM.aspx.frx" />
+    <None Include="Admin\Sys\FMonth\Sys_FMonthList.aspx.frx" />
+    <None Include="Admin\Sys\Function\Sys_FunctionList.aspx.frx" />
+    <Content Include="Admin\Bas\Type\Bas_Type.aspx" />
+    <Content Include="Admin\Bas\Type\Bas_TypeList.aspx" />
+    <Content Include="Admin\Bas\Material\Bas_Material.aspx" />
+    <Content Include="Admin\Bas\Material\Bas_MaterialList.aspx" />
+    <Content Include="Admin\Bas\Partner\Bas_Partner.aspx" />
+    <Content Include="Admin\Bas\Partner\Bas_PartnerList.aspx" />
+    <Content Include="Admin\Flow\DeployM\Flow_DeployM.aspx" />
+    <Content Include="Admin\Flow\DeployM\Flow_Designer.aspx" />
+    <Content Include="Admin\Flow\DeployM\Flow_DeployMList.aspx" />
+    <Content Include="Admin\Flow\Org\Flow_Org.aspx" />
+    <Content Include="Admin\Flow\Org\Flow_OrgList.aspx" />
+    <Content Include="Admin\Flow\ToDoM\Flow_InstanceView.aspx" />
+    <Content Include="Admin\Flow\ToDoM\Flow_ToDoM.aspx" />
+    <Content Include="Admin\Flow\ToDoM\Flow_ToDoMList.aspx" />
+    <Content Include="Admin\Flow\ToDoM\Flow_Submit.aspx" />
+    <Content Include="Admin\Hr\Leave\Hr_Leave.aspx" />
+    <Content Include="Admin\Hr\Leave\Hr_LeaveList.aspx" />
+    <Content Include="Admin\Hr\LeaveType\Hr_LeaveType.aspx" />
+    <Content Include="Admin\Hr\LeaveType\Hr_LeaveTypeList.aspx" />
+    <Content Include="Admin\Pur\PoM\Pur_PoD.aspx" />
+    <Content Include="Admin\Pur\PoM\Pur_PoDAdd.aspx" />
+    <Content Include="Admin\Pur\PoM\Pur_PoM.aspx" />
+    <Content Include="Admin\Pur\PoM\Pur_PoMList.aspx" />
+    <None Include="Admin\批处理工具.txt" />
+    <Content Include="Admin\Pur\PoM\Pur_PoMListPrint.aspx" />
+    <Content Include="Admin\Pur\PoM\Pur_PoMPrint.aspx" />
+    <Content Include="Admin\Sys\Log\Sys_Log.aspx" />
+    <Content Include="Admin\Sys\Log\Sys_LogList.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="UEditor\net\fileUp.ashx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Admin\Bas\Type\Bas_Type.aspx.cs">
+      <DependentUpon>Bas_Type.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bas\Type\Bas_Type.aspx.designer.cs">
+      <DependentUpon>Bas_Type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bas\Type\Bas_TypeList.aspx.cs">
+      <DependentUpon>Bas_TypeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bas\Type\Bas_TypeList.aspx.designer.cs">
+      <DependentUpon>Bas_TypeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bas\Material\Bas_Material.aspx.cs">
+      <DependentUpon>Bas_Material.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bas\Material\Bas_Material.aspx.designer.cs">
+      <DependentUpon>Bas_Material.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bas\Material\Bas_MaterialList.aspx.cs">
+      <DependentUpon>Bas_MaterialList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bas\Material\Bas_MaterialList.aspx.designer.cs">
+      <DependentUpon>Bas_MaterialList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bas\Partner\Bas_Partner.aspx.cs">
+      <DependentUpon>Bas_Partner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bas\Partner\Bas_Partner.aspx.designer.cs">
+      <DependentUpon>Bas_Partner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bas\Partner\Bas_PartnerList.aspx.cs">
+      <DependentUpon>Bas_PartnerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bas\Partner\Bas_PartnerList.aspx.designer.cs">
+      <DependentUpon>Bas_PartnerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Flow\DeployM\Flow_DeployM.aspx.cs">
+      <DependentUpon>Flow_DeployM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Flow\DeployM\Flow_DeployM.aspx.designer.cs">
+      <DependentUpon>Flow_DeployM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Flow\DeployM\Flow_Designer.aspx.cs">
+      <DependentUpon>Flow_Designer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Flow\DeployM\Flow_Designer.aspx.designer.cs">
+      <DependentUpon>Flow_Designer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Flow\DeployM\Flow_DeployMList.aspx.cs">
+      <DependentUpon>Flow_DeployMList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Flow\DeployM\Flow_DeployMList.aspx.designer.cs">
+      <DependentUpon>Flow_DeployMList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Flow\Org\Flow_Org.aspx.cs">
+      <DependentUpon>Flow_Org.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Flow\Org\Flow_Org.aspx.designer.cs">
+      <DependentUpon>Flow_Org.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Flow\Org\Flow_OrgList.aspx.cs">
+      <DependentUpon>Flow_OrgList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Flow\Org\Flow_OrgList.aspx.designer.cs">
+      <DependentUpon>Flow_OrgList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Flow\ToDoM\Flow_InstanceView.aspx.cs">
+      <DependentUpon>Flow_InstanceView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Flow\ToDoM\Flow_InstanceView.aspx.designer.cs">
+      <DependentUpon>Flow_InstanceView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Flow\ToDoM\Flow_ToDoM.aspx.cs">
+      <DependentUpon>Flow_ToDoM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Flow\ToDoM\Flow_ToDoM.aspx.designer.cs">
+      <DependentUpon>Flow_ToDoM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Flow\ToDoM\Flow_ToDoMList.aspx.cs">
+      <DependentUpon>Flow_ToDoMList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Flow\ToDoM\Flow_ToDoMList.aspx.designer.cs">
+      <DependentUpon>Flow_ToDoMList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Flow\ToDoM\Flow_Submit.aspx.cs">
+      <DependentUpon>Flow_Submit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Flow\ToDoM\Flow_Submit.aspx.designer.cs">
+      <DependentUpon>Flow_Submit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Hr\Leave\Hr_Leave.aspx.cs">
+      <DependentUpon>Hr_Leave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Hr\Leave\Hr_Leave.aspx.designer.cs">
+      <DependentUpon>Hr_Leave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Hr\Leave\Hr_LeaveList.aspx.cs">
+      <DependentUpon>Hr_LeaveList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Hr\Leave\Hr_LeaveList.aspx.designer.cs">
+      <DependentUpon>Hr_LeaveList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Hr\LeaveType\Hr_LeaveType.aspx.cs">
+      <DependentUpon>Hr_LeaveType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Hr\LeaveType\Hr_LeaveType.aspx.designer.cs">
+      <DependentUpon>Hr_LeaveType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Hr\LeaveType\Hr_LeaveTypeList.aspx.cs">
+      <DependentUpon>Hr_LeaveTypeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Hr\LeaveType\Hr_LeaveTypeList.aspx.designer.cs">
+      <DependentUpon>Hr_LeaveTypeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pur\PoM\Pur_PoD.aspx.cs">
+      <DependentUpon>Pur_PoD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pur\PoM\Pur_PoD.aspx.designer.cs">
+      <DependentUpon>Pur_PoD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pur\PoM\Pur_PoDAdd.aspx.cs">
+      <DependentUpon>Pur_PoDAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pur\PoM\Pur_PoDAdd.aspx.designer.cs">
+      <DependentUpon>Pur_PoDAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pur\PoM\Pur_PoM.aspx.cs">
+      <DependentUpon>Pur_PoM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pur\PoM\Pur_PoM.aspx.designer.cs">
+      <DependentUpon>Pur_PoM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pur\PoM\Pur_PoMList.aspx.cs">
+      <DependentUpon>Pur_PoMList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pur\PoM\Pur_PoMList.aspx.designer.cs">
+      <DependentUpon>Pur_PoMList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pur\PoM\Pur_PoMListPrint.aspx.cs">
+      <DependentUpon>Pur_PoMListPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pur\PoM\Pur_PoMListPrint.aspx.designer.cs">
+      <DependentUpon>Pur_PoMListPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pur\PoM\Pur_PoMPrint.aspx.cs">
+      <DependentUpon>Pur_PoMPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pur\PoM\Pur_PoMPrint.aspx.designer.cs">
+      <DependentUpon>Pur_PoMPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\Log\Sys_Log.aspx.cs">
+      <DependentUpon>Sys_Log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\Log\Sys_Log.aspx.designer.cs">
+      <DependentUpon>Sys_Log.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sys\Log\Sys_LogList.aspx.cs">
+      <DependentUpon>Sys_LogList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Sys\Log\Sys_LogList.aspx.designer.cs">
+      <DependentUpon>Sys_LogList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Com\FlowHelper.cs" />
+    <Compile Include="App_Com\PageFlow.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Com\PageMulti.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Com\PageListMulti.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Com\PrintBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UEditor\net\fileUp.ashx.cs">
+      <DependentUpon>fileUp.ashx</DependentUpon>
+    </Compile>
+    <Content Include="UEditor\net\getContent.ashx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="UEditor\net\getContent.ashx.cs">
+      <DependentUpon>getContent.ashx</DependentUpon>
+    </Compile>
+    <Content Include="UEditor\net\getMovie.ashx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="UEditor\net\getMovie.ashx.cs">
+      <DependentUpon>getMovie.ashx</DependentUpon>
+    </Compile>
+    <Content Include="UEditor\net\getRemoteImage.ashx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="UEditor\net\getRemoteImage.ashx.cs">
+      <DependentUpon>getRemoteImage.ashx</DependentUpon>
+    </Compile>
+    <Content Include="UEditor\net\imageManager.ashx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="UEditor\net\imageManager.ashx.cs">
+      <DependentUpon>imageManager.ashx</DependentUpon>
+    </Compile>
+    <Content Include="UEditor\net\imageUp.ashx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="UEditor\net\imageUp.ashx.cs">
+      <DependentUpon>imageUp.ashx</DependentUpon>
+    </Compile>
+    <Content Include="UEditor\net\scrawlUp.ashx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="UEditor\net\scrawlUp.ashx.cs">
+      <DependentUpon>scrawlUp.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="UEditor\net\upload\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7522</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" DoublePass="true" ReportInfo.Created="02/25/2011 15:54:40" ReportInfo.Modified="07/23/2013 13:16:34" ReportInfo.CreatorVersion="1.7.4.0">
+  <Dictionary>
+    <XmlDataConnection Name="Connection" ConnectionString="rijcmlqmmfdjkQxfe1iwShBNGpud2DNJi8TG0Ho++IAjT8vbETGKTyfHXMDkiGbzE/EOfohSiWHnJIzwLZ1SpEbvoKU3+qU4RXu6PCBYULMTcDPo/W6jCTzzMXKPkH/isEwcA70">
+      <TableDataSource Name="Table" DataType="System.Int32" Enabled="true" TableName="Table">
+        <Column Name="FID" Alias="FunctionID" DataType="System.String"/>
+        <Column Name="FCode" Alias="Seq" DataType="System.String"/>
+        <Column Name="FName" Alias="NameC" DataType="System.String"/>
+        <Column Name="FIcon" Alias="Icon" DataType="System.String"/>
+        <Column Name="FRemark" Alias="Remark" DataType="System.String"/>
+      </TableDataSource>
+    </XmlDataConnection>
+  </Dictionary>
+  <ReportPage Name="Page1" RawPaperSize="9" LeftMargin="5" TopMargin="5" RightMargin="5" BottomMargin="5">
+    <ReportTitleBand Name="ReportTitle1" Top="20" Width="756" Height="43.47">
+      <TextObject Name="Text7" Left="217.35" Top="1.89" Width="321.3" Height="22.68" Text="购采订单列表" HorzAlign="Center" Font="宋体, 16pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="83.47" Width="756" Height="28.35">
+      <TextObject Name="Text2" Left="5.67" Width="85.05" Height="18.9" Text="订单编号" Font="宋体, 10pt"/>
+      <TextObject Name="Text4" Left="90.72" Width="88.83" Height="18.9" Text="制单日期" Font="宋体, 10pt"/>
+      <TextObject Name="Text6" Left="565.11" Width="181.44" Height="18.9" Text="备注" Font="宋体, 10pt"/>
+      <LineObject Name="Line1" Left="5.67" Top="24.57" Width="742.77"/>
+      <TextObject Name="Text10" Left="179.55" Width="69.93" Height="18.9" Text="供方编号" Font="宋体, 10pt"/>
+      <TextObject Name="Text12" Left="249.48" Width="217.35" Height="18.9" Text="供方名称" Font="宋体, 10pt"/>
+      <TextObject Name="Text14" Left="466.83" Width="98.28" Height="18.9" Text="交货日期" Font="宋体, 10pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="131.82" Width="756" Height="21.01" DataSource="Table">
+      <TextObject Name="Text1" Left="5.67" Top="1.89" Width="85.05" Height="18.9" Text="[Table.PoMID]" Font="宋体, 10pt"/>
+      <TextObject Name="Text3" Left="90.72" Top="1.89" Width="88.83" Height="18.9" Text="[Table.PoMDate]" Font="宋体, 10pt"/>
+      <TextObject Name="Text5" Left="565.11" Top="1.89" Width="181.44" Height="18.9" Text="[Table.Remark]" Font="宋体, 10pt"/>
+      <TextObject Name="Text11" Left="179.55" Top="2.11" Width="69.93" Height="18.9" Text="[Table.PartnerID]" Font="宋体, 10pt"/>
+      <TextObject Name="Text13" Left="249.48" Top="1.32" Width="217.35" Height="18.9" Text="[Table.PartnerName]" Font="宋体, 10pt"/>
+      <TextObject Name="Text15" Left="466.83" Top="0.53" Width="98.28" Height="18.9" Text="[Table.DeliveryDate]" Font="宋体, 10pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="172.83" Width="756" Height="51.03">
+      <TextObject Name="Text8" Left="629.37" Top="9.45" Width="117.18" Height="18.9" Text="[PageNofM]" HorzAlign="Right" Font="宋体, 10pt"/>
+      <LineObject Name="Line2" Left="5.67" Top="1.89" Width="742.77"/>
+      <TextObject Name="Text9" Left="5.67" Top="5.67" Width="268.38" Height="18.9" Text="[Date]" Format="Date" Format.Format="d" Font="宋体, 10pt"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

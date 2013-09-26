@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<process>
+ <name>AskForLeave</name>
+ <processinfo>
+     <owner>OA</owner>
+     <creator></creator>
+     <keywords></keywords>
+     <title>请假流程</title>
+     <subject></subject>
+ </processinfo>
+ <variables height="100">
+     <variable name="GoBack" datatype="1" >0</variable>
+     <variable name="LeaveTimes" datatype="1" >0</variable>
+ </variables>
+ <activities>
+     <decision name="dn5Hr" location="{X=505,Y=285}">
+         <transition to="sn3Manager">
+             <condition>$GoBack==1</condition>
+         </transition>
+         <transition to="sn1Apply">
+             <condition>$GoBack==2</condition>
+         </transition>
+         <transition to="EndNode1">
+             <condition></condition>
+         </transition>
+     </decision>
+     <decision name="dn4Director" location="{X=358,Y=288}">
+         <transition to="sn3Manager">
+             <condition>$GoBack==1</condition>
+         </transition>
+         <transition to="sn1Apply">
+             <condition>$GoBack==2</condition>
+         </transition>
+         <transition to="sn5Hr">
+             <condition></condition>
+         </transition>
+     </decision>
+     <decision name="dn3Manager" location="{X=186,Y=287}">
+         <transition to="sn2Head">
+             <condition>$GoBack==1</condition>
+         </transition>
+         <transition to="sn1Apply">
+             <condition>$GoBack==2</condition>
+         </transition>
+         <transition to="sn4Director">
+             <condition>$LeaveTimes==1440</condition>
+         </transition>
+         <transition to="sn5Hr">
+             <condition></condition>
+         </transition>
+     </decision>
+     <decision name="dn2Head" location="{X=25,Y=288}">
+         <transition to="sn1Apply">
+             <condition>$GoBack==1</condition>
+         </transition>
+         <transition to="sn3Manager">
+             <condition></condition>
+         </transition>
+     </decision>
+     <sequence name="sn4Director" location="{X=352,Y=155}">
+         <actions>
+             <waitsignal id="ws4Director" description="总监审批(超3天)">
+                 <events>
+                     <onvarssetting>
+                     </onvarssetting>
+                 </events>
+             </waitsignal>
+         </actions>
+         <transition to="dn4Director" />
+     </sequence>
+     <start name="StartNode1" location="{X=40,Y=14}">
+         <transition to="sn1Apply" />
+     </start>
+     <end name="EndNode1" location="{X=724,Y=17}">
+     </end>
+     <sequence name="sn1Apply" location="{X=246,Y=24}">
+         <actions>
+             <waitsignal id="ws1Apply" description="申请人填写">
+                 <events>
+                     <onvarssetting>
+                     </onvarssetting>
+                 </events>
+             </waitsignal>
+         </actions>
+         <transition to="sn2Head" />
+     </sequence>
+     <sequence name="sn2Head" location="{X=22,Y=150}">
+         <actions>
+             <waitsignal id="ws2Head" description="主管审批">
+                 <events>
+                     <onvarssetting>
+                     </onvarssetting>
+                 </events>
+             </waitsignal>
+         </actions>
+         <transition to="dn2Head" />
+     </sequence>
+     <sequence name="sn3Manager" location="{X=183,Y=148}">
+         <actions>
+             <waitsignal id="ws3Manager" description="经理审批">
+                 <events>
+                     <onvarssetting>
+                     </onvarssetting>
+                 </events>
+             </waitsignal>
+         </actions>
+         <transition to="dn3Manager" />
+     </sequence>
+     <sequence name="sn5Hr" location="{X=500,Y=156}">
+         <actions>
+             <waitsignal id="ws5Hr" description="人事审批">
+                 <events>
+                     <onvarssetting>
+                     </onvarssetting>
+                 </events>
+             </waitsignal>
+         </actions>
+         <transition to="dn5Hr" />
+     </sequence>
+ </activities>
+</process>
+

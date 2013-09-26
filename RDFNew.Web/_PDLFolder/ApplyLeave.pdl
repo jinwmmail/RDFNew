@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<process>
+ <name>ApployLeaveBack</name>
+ <processinfo>
+     <owner>OA</owner>
+     <creator></creator>
+     <keywords></keywords>
+     <title></title>
+     <subject></subject>
+ </processinfo>
+ <variables height="100">
+     <variable name="GoBack" datatype="3" >false</variable>
+ </variables>
+ <activities>
+     <sequence name="SeqNode3" location="{X=370,Y=31}">
+         <actions>
+             <waitsignal id="WaitSignal3" description="会签C">
+                 <events>
+                     <onvarssetting>
+                     </onvarssetting>
+                 </events>
+             </waitsignal>
+         </actions>
+         <transition to="DecNode3" />
+     </sequence>
+     <sequence name="SeqNode2" location="{X=156,Y=177}">
+         <actions>
+             <waitsignal id="WaitSignal2" description="会签B">
+                 <events>
+                     <onvarssetting>
+                     </onvarssetting>
+                 </events>
+             </waitsignal>
+         </actions>
+         <transition to="DecNode2" />
+     </sequence>
+     <sequence name="SeqNode1" location="{X=155,Y=30}">
+         <actions>
+             <waitsignal id="WaitSignal1" description="会签A">
+                 <events>
+                     <onvarssetting>
+                     </onvarssetting>
+                 </events>
+             </waitsignal>
+         </actions>
+         <transition to="SeqNode2" />
+     </sequence>
+     <end name="EndNode1" location="{X=697,Y=375}">
+     </end>
+     <start name="StartNode1" location="{X=5,Y=5}">
+         <transition to="SeqNode1" />
+     </start>
+     <decision name="DecNode2" location="{X=166,Y=305}">
+         <transition to="SeqNode1">
+             <condition>$GoBack==true</condition>
+         </transition>
+         <transition to="SeqNode3">
+             <condition></condition>
+         </transition>
+     </decision>
+     <decision name="DecNode3" location="{X=379,Y=244}">
+         <transition to="SeqNode2">
+             <condition>$GoBack==true</condition>
+         </transition>
+         <transition to="EndNode1">
+             <condition></condition>
+         </transition>
+     </decision>
+ </activities>
+</process>
+

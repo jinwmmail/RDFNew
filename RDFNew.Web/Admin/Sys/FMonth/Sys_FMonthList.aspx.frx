@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report DoublePass="true" ReportInfo.Created="02/25/2011 15:54:40" ReportInfo.Modified="12/05/2012 12:10:31" ReportInfo.CreatorVersion="1.2.79.0">
+  <Dictionary>
+    <XmlDataConnection Name="Connection" ConnectionString="rijcmlqmmfdjkQxfe1iwShBNGpud2DNJi8TG0Ho++IAjT8vbETGKTyfHXMDkiGbzE/EOfohSiWHnJIzwLZ1SpEbvoKU3+qU4RXu6PCBYULMTcDPo/VJX7TPVsbSn+HGB8raBS8h">
+      <TableDataSource Name="Table" DataType="System.Int32" Enabled="true" TableName="Table">
+        <Column Name="FID" Alias="FMonthID" DataType="System.String"/>
+        <Column Name="FCode" Alias="Seq" DataType="System.String"/>
+        <Column Name="Closed" DataType="System.Boolean" PropName="FName" BindableControl="CheckBox"/>
+        <Column Name="FIcon" Alias="Icon" Enabled="false" DataType="System.String"/>
+        <Column Name="FRemark" Alias="Remark" DataType="System.String"/>
+      </TableDataSource>
+    </XmlDataConnection>
+  </Dictionary>
+  <ReportPage Name="Page1" LeftMargin="5" TopMargin="5" RightMargin="5" BottomMargin="5">
+    <ReportTitleBand Name="ReportTitle1" Width="756" Height="88.83">
+      <TextObject Name="Text7" Left="217.35" Top="13.23" Width="321.3" Height="35.91" Text="财务月份列表" HorzAlign="Center" Font="宋体, 16pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="92.83" Width="756" Height="28.35">
+      <TextObject Name="Text2" Left="5.67" Width="96.39" Height="18.9" Text="财务月份" Font="宋体, 10pt"/>
+      <LineObject Name="Line1" Left="5.67" Top="24.57" Width="742.77"/>
+      <TextObject Name="Text3" Left="187.11" Width="137.97" Height="18.9" Text="已关帐"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="125.18" Width="756" Height="21.01" DataSource="Table">
+      <TextObject Name="Text1" Left="5.67" Top="1.89" Width="96.39" Height="18.9" Text="[Table.FMonthID]" Font="宋体, 10pt"/>
+      <CheckBoxObject Name="CheckBox1" Left="187.11" Top="1.89" Width="20.79" Height="18.9" DataColumn="Table.Closed"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="150.19" Width="756" Height="51.03">
+      <TextObject Name="Text8" Left="629.37" Top="9.45" Width="117.18" Height="18.9" Text="[PageNofM]" HorzAlign="Right" Font="宋体, 10pt"/>
+      <LineObject Name="Line2" Left="5.67" Top="1.89" Width="742.77"/>
+      <TextObject Name="Text9" Left="5.67" Top="5.67" Width="268.38" Height="18.9" Text="[Date]" Format="Date" Format.Format="d" Font="宋体, 10pt"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

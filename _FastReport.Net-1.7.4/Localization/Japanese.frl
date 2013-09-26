@@ -1,0 +1,1619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language Name="ja" Author="jiro &lt;jiro@agtech.co.jp&gt;;yukari &lt;yukari@agtech.co.jp&gt;">
+  <Buttons>
+    <Ok Text="OK"/>
+    <Cancel Text="キャンセル"/>
+    <Close Text="閉じる"/>
+    <MoreOptions Text="詳細オプション"/>
+    <LessOptions Text="オプションを閉じる"/>
+    <Actions Text="操作"/>
+    <Previous Text="&lt; 前へ"/>
+    <Next Text="次へ &gt;"/>
+    <Finish Text="完了"/>
+    <Advanced Text="詳細..."/>
+  </Buttons>
+  <Messages>
+    <AccessingData Text="データにアクセスしています..."/>
+    <Attention Text="注意"/>
+    <CantFindObject Text="オブジェクトが見つかりません: "/>
+    <CantLoadReport Text="{0} レポートを読み込めません。"/>
+    <CantSaveReport Text="レポートを保存できません。ファイルは書き込み禁止になっている可能性があります。"/>
+    <ClassError Text="メインのレポート クラス ReportScript が見つかりませんでした。"/>
+    <Confirmation Text="確認"/>
+    <DataNotInitialized Text="データ ソースはまだ初期化されていません。"/>
+    <DecompressError Text="ファイルを圧縮解除できません"/>
+    <DecryptError Text="復号化エラー: パスワードが間違っています"/>
+    <DelegateError Text="{0} デリゲートには、'sender' と 'e' の 2 つの引数が必要です"/>
+    <DeleteAncestor Text="{0} は先祖のレポートで挿入されたので、削除できませんでした"/>
+    <DuplicateName Text="{0} という名前のオブジェクトは既に存在します"/>
+    <DuplicateStyle Text="そのような名前のスタイルは既に存在します"/>
+    <Error Text="エラー"/>
+    <EventError Text="ソース コードにエラーがあるため、イベント ハンドラーを作成できませんでした"/>
+    <ExportingPage Text="ページ {0} / {1} をエクスポートしています"/>
+    <GeneratingPage Text="ページ {0} を生成しています"/>
+    <GeneratingPageFirstPass Text="最初のパス: ページ {0} を生成しています"/>
+    <Information Text="情報"/>
+    <MatrixError Text="{0}: Matrix オブジェクトには、少なくとも 1 列または 1 行と、1 つのセル範囲がある必要があります。"/>
+    <MatrixValueError Text="値の数が MatrixData.Cells.Count と異なります ({0} である必要があります)"/>
+    <ParentError Text="型 {0} のオブジェクトに型 {1} のオブジェクトを含めることはできません"/>
+    <ParentError1 Text="型 {0} のオブジェクトにオブジェクトを含めることはできません"/>
+    <Performance Text="準備時間: {0} ミリ秒"/>
+    <PreparingData Text="データを準備しています..."/>
+    <PrintingPage Text="ページ {0} を印刷しています"/>
+    <RenameAncestor Text="{0} は先祖のレポートで挿入されたので、名前を変更できませんでした"/>
+    <SaveChanges Text="{0} への変更を保存しますか?"/>
+    <SaveChangesToPreviewPage Text="プレビュー ページへの変更を保存しますか?"/>
+    <TableIsNull Text="テーブルがデータに接続されていません。Report.RegisterData メソッドを使って、データを登録してください。"/>
+    <TableManualBuildError Text="TableObject.PrintRow および PrintColumn メソッドは、その ManualBuild イベント内でのみ使用できます。"/>
+    <Warning Text="警告"/>
+    <WarningSaveRDL Text="RDL 形式にはいくつかの制約があります。このフィルターは、テンプレートのビューのみを保存します。データ ソースやオブジェクトのバーコード、リッチ テキスト、チェック ボックス、および郵便番号は保存されません。オブジェクトのプロパティの一部も保存されません。そのため、テンプレートの一部の要素およびプロパティが失われる可能性があります。それでも保存しますか?"/>
+    <WrongFileFormat Text="ファイルを読み込めません。ファイル形式が不明です。"/>
+  </Messages>
+  <Misc>
+    <ShortUnitsMm Text="mm"/>
+    <ShortUnitsCm Text="cm"/>
+    <ShortUnitsIn Text="in"/>
+    <ShortUnitsHi Text="hi"/>
+    <Sample Text="サンプル"/>
+    <None Text="なし"/>
+    <PageN Text="ページ {0}"/>
+    <PageNofM Text="ページ {0} / {1}"/>
+    <ofM Text="/ {0}"/>
+  </Misc>
+  <Objects>
+    <Report Text="レポート"/>
+    <ReportPage Text="ページ"/>
+    <DialogPage Text="フォーム"/>
+    <XmlDataConnection Text="XML データベース"/>
+    <OleDbDataConnection Text="OLE DB 接続"/>
+    <MsAccessDataConnection Text="MS Access 接続"/>
+    <MsSqlDataConnection Text="MS SQL 接続"/>
+    <OdbcDataConnection Text="ODBC 接続"/>
+    <FirebirdDataConnection Text="Firebird 接続"/>
+    <VistaDBDataConnection Text="VistaDB 接続"/>
+    <PostgresDataConnection Text="Postgres 接続"/>
+    <MySqlDataConnection Text="MySQL 接続"/>
+    <OracleDataConnection Text="Oracle 接続"/>
+    <SQLiteDataConnection Text="SQLite 接続"/>
+    <SqlCeDataConnection Text="SQL CE 接続"/>
+    <Bands Text="バンド">
+      <ReportTitle Text="レポート タイトル"/>
+      <ReportSummary Text="レポートの概要"/>
+      <PageHeader Text="ページ ヘッダー"/>
+      <PageFooter Text="ページ フッター"/>
+      <ColumnHeader Text="列ヘッダー"/>
+      <ColumnFooter Text="列フッター"/>
+      <DataHeader Text="ヘッダー"/>
+      <DataFooter Text="フッター"/>
+      <Data Text="データ"/>
+      <GroupHeader Text="グループ ヘッダー"/>
+      <GroupFooter Text="グループ フッター"/>
+      <Child Text="子"/>
+      <Overlay Text="オーバーレイ"/>
+    </Bands>
+    <TextObject Text="テキスト"/>
+    <Shapes Text="図形">
+      <Line Text="線"/>
+      <DiagonalLine Text="対角線"/>
+      <Rectangle Text="四角形"/>
+      <RoundRectangle Text="角丸四角形"/>
+      <Ellipse Text="楕円"/>
+      <Triangle Text="三角形"/>
+      <Diamond Text="ひし形"/>
+    </Shapes>
+    <PictureObject Text="図"/>
+    <TableObject Text="表"/>
+    <MatrixObject Text="行列"/>
+    <SubreportObject Text="サブレポート"/>
+    <BarcodeObject Text="バーコード"/>
+    <RichObject Text="リッチ テキスト"/>
+    <MSChartObject Text="MS Chart"/>
+    <ZipCodeObject Text="郵便番号"/>
+    <CellularTextObject Text="セル形式テキスト"/>
+    <CheckBoxObject Text="チェック ボックス"/>
+    <ButtonControl Text="Button (ボタン)"/>
+    <CheckBoxControl Text="CheckBox (チェック ボックス)"/>
+    <CheckedListBoxControl Text="CheckedListBox (チェック ボックス付きリスト ボックス)"/>
+    <ComboBoxControl Text="ComboBox (コンボ ボックス)"/>
+    <GridControl Text="Grid (グリッド)"/>
+    <DataSelectorControl Text="DataSelector (データ セレクター)"/>
+    <DateTimePickerControl Text="DateTimePicker (日付選択カレンダー)"/>
+    <GroupBoxControl Text="GroupBox (グループ ボックス)"/>
+    <LabelControl Text="Label (ラベル)"/>
+    <ListBoxControl Text="ListBox (リスト ボックス)"/>
+    <ListViewControl Text="ListView (リスト ビュー)"/>
+    <MaskedTextBoxControl Text="MaskedTextBox (マスク付きテキスト ボックス)"/>
+    <MonthCalendarControl Text="MonthCalendar (月表示カレンダー)"/>
+    <NumericUpDownControl Text="NumericUpDown (スピン ボックス)"/>
+    <PanelControl Text="Panel (パネル)"/>
+    <PictureBoxControl Text="PictureBox (ピクチャ ボックス)"/>
+    <RadioButtonControl Text="RadioButton (ラジオ ボタン)"/>
+    <RichTextBoxControl Text="RichTextBox (リッチ テキスト ボックス)"/>
+    <TextBoxControl Text="TextBox (テキスト ボックス)"/>
+    <TreeViewControl Text="TreeView (ツリー ビュー)"/>
+  </Objects>
+  <Functions>
+    <Math Text="数学"/>
+    <Text Text="文字列"/>
+    <DateTime Text="日付と時刻"/>
+    <Formatting Text="書式"/>
+    <Conversion Text="変換"/>
+    <ProgramFlow Text="プログラム フロー"/>
+  </Functions>
+  <FileFilters>
+    <Report Text="レポート ファイル (*.frx)|*.frx"/>
+    <PreparedReport Text="用意されたレポート (*.fpx)|*.fpx"/>
+    <Style Text="レポート スタイル (*.frs)|*.frs"/>
+    <Dictionary Text="辞書 (*.frd)|*.frd"/>
+    <Localization Text="ローカライズ ファイル (*.frl)|*.frl"/>
+    <XsdFile Text="XML スキーマ定義ファイル (*.xsd)|*.xsd"/>
+    <XmlFile Text="XML ファイル (*.xml)|*.xml"/>
+    <MdbFile Text="MS Access データベース (*.mdb)|*.mdb"/>
+    <MdfFile Text="Microsoft SQL Server データベース (*.mdf)|*.mdf"/>
+    <RtfFile Text="リッチ テキスト ファイル (*.rtf)|*.rtf"/>
+    <Images Text="イメージ ファイル|*.bmp;*.png;*.jpg;*.jpeg;*.gif;*.tiff;*.tif;*.ico;*.emf;*.wmf"/>
+    <Assembly Text="アセンブリ (*.dll,*.exe)|*.dll;*.exe"/>
+    <PrnFile Text="プリンター ファイル (*.prn)|*.prn"/>
+    <BmpFile Text="ビットマップ イメージ (*.bmp)|*.bmp"/>
+    <PngFile Text="PNG イメージ (*.png)|*.png"/>
+    <JpegFile Text="JPG イメージ (*.jpg)|*.jpg"/>
+    <GifFile Text="GIF イメージ (*.gif)|*.gif"/>
+    <TiffFile Text="TIFF イメージ (*.tiff)|*.tiff"/>
+    <MetafileFile Text="Windows メタファイル (*.emf)|*.emf"/>
+    <HtmlFile Text="HTML ファイル (*.html)|*.html"/>
+    <MhtFile Text="Web アーカイブ ファイル (*.mht)|*.mht"/>
+    <OdtFile Text="Open Office Writer ファイル (*.odt)|*.odt"/>
+    <OdsFile Text="Open Office Calc ファイル (*.ods)|*.ods"/>
+    <PdfFile Text="Adobe Acrobat ファイル (*.pdf)|*.pdf"/>
+    <TxtFile Text="テキスト ファイル (*.txt)|*.txt"/>
+    <CsvFile Text="カンマ区切り値 (*.csv)|*.csv"/>
+    <DbfFile Text="dBase テーブル ファイル (*.dbf)|*.dbf"/>
+    <XlsFile Text="MS Excel ファイル (*.xls)|*.xls"/>
+    <CsFile Text="C# ファイル (*.cs)|*.cs"/>
+    <VbFile Text="VB.Net ファイル (*.vb)|*.vb"/>
+    <FdbFile Text="Firebird データベース (*.fdb)|*.fdb"/>
+    <Vdb3File Text="VistaDB データベース (*.vdb*)|*.vdb*"/>
+    <XlsxFile Text="MS Excel ブック (*.xlsx)|*.xlsx"/>
+    <PptxFile Text="MS PowerPoint プレゼンテーション (*.pptx)|*.pptx"/>
+    <DocxFile Text="MS Word 文書 (*.docx)|*.docx"/>
+    <SdfFile Text="SQL CE データベース (*.sdf)|*.sdf"/>
+    <XpsFile Text="XPS ファイル (*.xps)|*.xps"/>
+    <RdlFiles Text="RDL ファイル (*.rdl;*.rdlc)|*.rdl;*.rdlc"/>
+    <RdlFile Text="RDL ファイル (*.rdl;*.rdlc)|*.rdl;*.rdlc"/>
+    <RdlcFile Text="RDLC ファイル (*.rdlc)|*.rdlc"/>
+  </FileFilters>
+  <Formats>
+    <Date1 Text="d"/>
+    <Date2 Text="D"/>
+    <Date3 Text="f"/>
+    <Date4 Text="F"/>
+    <Date5 Text="MM/dd/yy"/>
+    <Date6 Text="MMMM dd, yyyy"/>
+    <Date7 Text="MMMM yyyy"/>
+    <Time1 Text="t"/>
+    <Time2 Text="T"/>
+    <Time3 Text="hh:mm tt"/>
+    <Time4 Text="HH:mm"/>
+    <BooleanF1 Text="False"/>
+    <BooleanF2 Text="No"/>
+    <BooleanF3 Text="Off"/>
+    <BooleanF4 Text=" "/>
+    <BooleanT1 Text="True"/>
+    <BooleanT2 Text="Yes"/>
+    <BooleanT3 Text="On"/>
+    <BooleanT4 Text="X"/>
+    <Custom1 Text="電話番号;(000) 000-0000"/>
+    <Custom2 Text="長い電話番号;+0(000) 000-0000"/>
+    <Custom3 Text="社会保障;000-00-0000"/>
+    <Custom4 Text="短い郵便番号;00000"/>
+    <Custom5 Text="郵便番号;000-0000"/>
+  </Formats>
+  <Designer>
+    <Menu>
+      <File Text="ファイル">
+        <New Text="新規作成..."/>
+        <Open Text="開く..."/>
+        <Close Text="閉じる"/>
+        <Save Text="上書き保存"/>
+        <SaveAs Text="名前を付けて保存..."/>
+        <SaveAll Text="すべてを保存"/>
+        <PageSetup Text="ページ設定..."/>
+        <PrinterSetup Text="プリンターの設定..."/>
+        <Preview Text="プレビュー..."/>
+        <SelectLanguage Text="言語の選択..."/>
+        <Exit Text="終了"/>
+      </File>
+      <Edit Text="編集">
+        <Undo Text="元に戻す"/>
+        <Redo Text="やり直し"/>
+        <Cut Text="切り取り"/>
+        <Copy Text="コピー"/>
+        <Paste Text="貼り付け"/>
+        <Delete Text="削除"/>
+        <DeletePage Text="ページの削除"/>
+        <SelectAll Text="すべて選択"/>
+        <Group Text="グループ化"/>
+        <Ungroup Text="グループ解除"/>
+        <Find Text="検索..."/>
+        <Replace Text="置換..."/>
+      </Edit>
+      <View Text="表示">
+        <StartPage Text="開始ページ"/>
+        <Toolbars Text="ツール バー"/>
+        <Options Text="オプション..."/>
+        <Grid Text="グリッド"/>
+        <Guides Text="ガイド"/>
+        <AutoGuides Text="自動ガイド"/>
+        <DeleteHGuides Text="水平ガイドを削除"/>
+        <DeleteVGuides Text="垂直ガイドを削除"/>
+        <Units Text="単位"/>
+      </View>
+      <Insert Text="挿入"/>
+      <Report Text="レポート">
+        <Bands Text="バンドの構成..."/>
+        <Styles Text="スタイル..."/>
+        <GroupExpert Text="グループ エキスパート..."/>
+        <Options Text="オプション..."/>
+      </Report>
+      <Data Text="データ">
+        <ShowData Text="データ ウィンドウの表示"/>
+        <Add Text="データ ソースの追加..."/>
+        <Choose Text="レポート データの選択..."/>
+      </Data>
+      <Window Text="ウィンドウ">
+        <CloseAll Text="すべて閉じる"/>
+      </Window>
+      <Help Text="ヘルプ">
+        <Contents Text="ヘルプの目次..."/>
+        <About Text="バージョン情報..."/>
+      </Help>
+    </Menu>
+    <ToolWindow>
+      <Properties Text="プロパティ">
+        <PropertiesTab Text="プロパティ"/>
+        <EventsTab Text="イベント"/>
+        <NObjectsSelected Text="{0} 個のオブジェクトが選択されています"/>
+      </Properties>
+      <ReportTree Text="レポート ツリー"/>
+      <Dictionary Text="データ">
+        <DataSources Text="データ ソース"/>
+        <Parameters Text="パラメーター"/>
+        <SystemVariables Text="システム変数"/>
+        <Totals Text="集計"/>
+        <Functions Text="関数"/>
+        <DialogControls Text="ダイアログ コントロール"/>
+        <New Text="新しい辞書..."/>
+        <Open Text="辞書を開く..."/>
+        <Save Text="辞書の保存..."/>
+        <Merge Text="辞書のマージ..."/>
+        <NewDataSource Text="新しいデータ ソース..."/>
+        <NewRelation Text="新しい関係..."/>
+        <NewParameter Text="新しいパラメーター"/>
+        <NewTotal Text="新しい集計..."/>
+        <NewCalculatedColumn Text="新しい計算列..."/>
+        <Rename Text="名前の変更"/>
+        <Edit Text="編集..."/>
+        <Delete Text="削除"/>
+        <DeleteAlias Text="エイリアスの削除"/>
+        <View Text="データの表示..."/>
+        <DuplicateName Text="そのような名前の項目は既に存在します"/>
+        <NRows Text="{0} 行"/>
+      </Dictionary>
+      <Messages Text="メッセージ">
+        <Description Text="説明"/>
+        <Line Text="行"/>
+        <Column Text="列"/>
+      </Messages>
+    </ToolWindow>
+    <Toolbar>
+      <AddOrRemove Text="ボタンの追加と削除"/>
+      <Reset Text="ツール バーのリセット"/>
+      <Standard Text="標準">
+        <New Text="新しい項目の追加"/>
+        <Open Text="レポートを開く (Ctrl+O)"/>
+        <Save Text="レポートの保存 (Ctrl+S)"/>
+        <SaveAll Text="すべてを保存 (Ctrl+Shift+S)"/>
+        <Preview Text="プレビュー (Ctrl+P)"/>
+        <NewPage Text="新しいレポート ページ"/>
+        <NewDialog Text="新しいダイアログ"/>
+        <DeletePage Text="ページの削除"/>
+        <PageSetup Text="ページ設定"/>
+        <Cut Text="切り取り (Ctrl+X)"/>
+        <Copy Text="コピー (Ctrl+C)"/>
+        <Paste Text="貼り付け (Ctrl+V)"/>
+        <FormatPainter Text="書式のコピー/貼り付け"/>
+        <Undo Text="元に戻す (Ctrl+Z)"/>
+        <Redo Text="やり直し"/>
+        <Group Text="グループ化"/>
+        <Ungroup Text="グループ解除"/>
+      </Standard>
+      <Text Text="テキスト">
+        <Name Text="フォント名"/>
+        <Size Text="フォント サイズ"/>
+        <Bold Text="太字"/>
+        <Italic Text="斜体"/>
+        <Underline Text="下線"/>
+        <Left Text="左揃え"/>
+        <Center Text="中央揃え"/>
+        <Right Text="右揃え"/>
+        <Justify Text="両端揃え"/>
+        <Top Text="上揃え"/>
+        <Middle Text="上下中央揃え"/>
+        <Bottom Text="下揃え"/>
+        <Color Text="テキストの色"/>
+        <Highlight Text="強調表示"/>
+        <Angle Text="テキストの角度"/>
+      </Text>
+      <Border Text="罫線と塗りつぶし">
+        <Top Text="上罫線"/>
+        <Bottom Text="下罫線"/>
+        <Left Text="左罫線"/>
+        <Right Text="右罫線"/>
+        <All Text="外枠"/>
+        <None Text="枠なし"/>
+        <FillColor Text="塗りつぶしの色"/>
+        <FillStyle Text="塗りつぶしのスタイル..."/>
+        <LineColor Text="線の色"/>
+        <Width Text="線の太さ"/>
+        <Style Text="線のスタイル"/>
+        <Props Text="罫線のプロパティ..."/>
+      </Border>
+      <Style Text="スタイル">
+        <Styles Text="スタイル"/>
+        <SelectStyle Text="スタイルの選択"/>
+        <NoStyle Text="スタイルなし"/>
+      </Style>
+      <Layout Text="レイアウト">
+        <AlignToGrid Text="グリッドに合わせる"/>
+        <Left Text="左揃え"/>
+        <Center Text="左右中央揃え"/>
+        <Right Text="右揃え"/>
+        <Top Text="上揃え"/>
+        <Middle Text="上下中央揃え"/>
+        <Bottom Text="下揃え"/>
+        <SameWidth Text="幅を揃える"/>
+        <SameHeight Text="高さを揃える"/>
+        <SameSize Text="同じサイズに揃える"/>
+        <SizeToGrid Text="グリッドのサイズに揃える"/>
+        <SpaceHorizontally Text="左右の間隔を均等にする"/>
+        <IncreaseHorizontalSpacing Text="左右の間隔を広くする"/>
+        <DecreaseHorizontalSpacing Text="左右の間隔を狭くする"/>
+        <RemoveHorizontalSpacing Text="左右の間隔を削除"/>
+        <SpaceVertically Text="上下の間隔を均等にする"/>
+        <IncreaseVerticalSpacing Text="上下の間隔を広くする"/>
+        <DecreaseVerticalSpacing Text="上下の間隔を狭くする"/>
+        <RemoveVerticalSpacing Text="上下の間隔を削除"/>
+        <CenterHorizontally Text="フォームの左右中央に配置"/>
+        <CenterVertically Text="フォームの上下中央に配置"/>
+        <BringToFront Text="最前面へ移動"/>
+        <SendToBack Text="最背面へ移動"/>
+      </Layout>
+      <Objects Text="オブジェクト">
+        <Select Text="選択"/>
+      </Objects>
+      <Zoom Text="ズーム">
+        <ZoomOut Text="縮小"/>
+        <ZoomIn Text="拡大"/>
+        <Zoom Text="ズーム"/>
+        <PageWidth Text="ページ幅に合わせて表示"/>
+        <WholePage Text="ページ全体を表示"/>
+      </Zoom>
+    </Toolbar>
+    <Workspace>
+      <Code Text="コード"/>
+      <Report>
+        <ConfigureBands Text="バンドの構成..."/>
+      </Report>
+    </Workspace>
+    <Options Text="オプション"/>
+    <UndoRedo>
+      <Delete Text="{0} の削除"/>
+      <Move Text="{0} の移動"/>
+      <Size Text="{0} のサイズの変更"/>
+      <Change Text="{0} の変更"/>
+      <AddGuide Text="ガイドの追加"/>
+      <MoveGuide Text="ガイドの移動"/>
+      <DeleteHGuides Text="水平ガイドの削除"/>
+      <DeleteVGuides Text="垂直ガイドの削除"/>
+      <ResizeBand Text="バンドのサイズ変更"/>
+      <ChangeParent Text="{0} の親の変更"/>
+      <Load Text="レポートの読み込み"/>
+      <Paste Text="{0} の貼り付け"/>
+      <Insert Text="{0} の挿入"/>
+      <AddPage Text="ページ {0} の追加"/>
+      <DeletePage Text="ページの削除"/>
+      <Script Text="スクリプトの変更"/>
+      <NObjects Text="{0} 個のオブジェクト"/>
+      <UndoN Text="{0} 個の操作を元に戻す"/>
+      <RedoN Text="{0} 個の操作をやり直す"/>
+      <ChangeReport Text="レポートの変更"/>
+      <ChangePagesOrder Text="ページの順序の変更"/>
+      <EditPage Text="ページの編集"/>
+      <EditPrinter Text="プリンターの設定の編集"/>
+      <EditReport Text="レポートの設定の編集"/>
+      <SelectData Text="データの選択"/>
+      <EditData Text="データの編集"/>
+    </UndoRedo>
+    <StartPage Text="開始ページ"/>
+    <Untitled Text="無題.frx"/>
+    <ColorSelector>
+      <CustomColors Text="ユーザー設定"/>
+      <WebColors Text="Web"/>
+      <SystemColors Text="システム"/>
+      <Other Text="その他の色"/>
+      <Transparency Text="透明度:"/>
+    </ColorSelector>
+  </Designer>
+  <Preview Text="プレビュー">
+    <PrintText Text="印刷"/>
+    <Print Text="印刷 (Ctrl+P)"/>
+    <Open Text="ファイルを開く"/>
+    <Save Text="ファイルの保存"/>
+    <SaveText Text="保存"/>
+    <Email Text="電子メールで送信"/>
+    <Find Text="テキストの検索"/>
+    <Outline Text="アウトライン"/>
+    <PageSetup Text="ページ設定"/>
+    <Edit Text="ページの編集"/>
+    <Watermark Text="ウォーターマーク"/>
+    <First Text="最初のページ"/>
+    <Prior Text="前のページ"/>
+    <Next Text="次のページ"/>
+    <Last Text="最後のページ"/>
+    <SaveNative Text="用意されたレポート"/>
+  </Preview>
+  <Forms>
+    <About Text="バージョン情報">
+      <Version Text="バージョン"/>
+      <Visit Text="詳しい情報は、弊社の Web サイトをご覧ください:"/>
+    </About>
+    <AddNewItem Text="新しい項目の追加">
+      <Add Text="追加"/>
+      <Reports Text="レポート テンプレート:"/>
+      <ReportItems Text="レポート項目:"/>
+    </AddNewItem>
+    <AdvancedConnectionProperties Text="詳細プロパティ"/>
+    <AskPassword Text="パスワード">
+      <Password Text="このレポートはパスワードで保護されています。&#13;&#10;&#13;&#10;パスワードを入力してください:"/>
+    </AskPassword>
+    <AskLoginPassword Text="データベース ログイン">
+      <Login Text="ログイン:"/>
+      <Password Text="パスワード:"/>
+    </AskLoginPassword>
+    <BaseReportWizard>
+      <SelectDataSourcePage Text="データ ソースの選択"/>
+      <SelectDataSource Text="使用可能なデータ ソースの 1 つを選択するか、新しいデータ ソースを作成してください:"/>
+      <CreateNewDatasource Text="新しいデータ ソースの作成..."/>
+      <SelectColumnsPage Text="データ列の選択"/>
+      <SelectColumns Text="レポートに表示するデータ列を選択します。"/>
+      <AvailableColumns Text="使用可能な列:"/>
+      <SelectedColumns Text="選択した列:"/>
+    </BaseReportWizard>
+    <Border Text="罫線エディター">
+      <Border Text="罫線"/>
+      <Line Text="線"/>
+      <Shadow Text="影付き"/>
+      <Style Text="スタイル:"/>
+      <Width Text="幅:"/>
+      <Color Text="色:"/>
+      <Hint Text="線のスタイルを選択してから、そのスタイルを適用する罫線を選択します。"/>
+    </Border>
+    <ChartEditor Text="グラフ エディター">
+      <Chart Text="グラフ"/>
+      <Add Text="追加..."/>
+      <Delete Text="削除"/>
+      <Hint Text="プロパティの設定を行う項目をクリックしてください。"/>
+      <Common>
+        <Color Text="色:"/>
+        <BackColor Text="背景色:"/>
+        <SecondaryColor Text="補色:"/>
+        <Gradient Text="グラデーション:"/>
+        <HatchStyle Text="ハッチ スタイル:"/>
+        <BorderColor Text="枠線の色:"/>
+        <BorderStyle Text="枠線のスタイル:"/>
+        <BorderWidth Text="枠線の太さ:"/>
+        <ShadowColor Text="影の色:"/>
+        <ShadowOffset Text="影のオフセット:"/>
+        <LineColor Text="線の色:"/>
+        <LineStyle Text="線のスタイル:"/>
+        <LineWidth Text="線の太さ:"/>
+        <Text Text="テキスト:"/>
+        <Font Text="フォント:"/>
+        <ForeColor Text="前景色:"/>
+        <Dock Text="ドッキング:"/>
+        <InsideChartArea Text="グラフ領域の内側"/>
+        <Format Text="書式:"/>
+      </Common>
+      <ChartEditorControl>
+        <Data Text="データ">
+          <DataSource Text="データ ソース:"/>
+          <Filter Text="フィルター:"/>
+          <AutoSeries Text="自動作成される系列"/>
+          <DataColumn Text="データ列:"/>
+          <ColorColumn Text="色列:"/>
+          <SeriesSort Text="系列の並べ替え:"/>
+          <AlignXValues Text="X 値の数を揃える"/>
+        </Data>
+        <Appearance Text="外観">
+          <Template Text="テンプレート:"/>
+          <Load Text="読み込み..."/>
+          <Save Text="保存..."/>
+          <SeriesPalette Text="系列のパレット:"/>
+          <BorderSkin Text="枠線の表面:"/>
+        </Appearance>
+        <ChartArea Text="グラフ領域">
+          <Area Text="領域:"/>
+        </ChartArea>
+        <ThreeD Text="3D">
+          <Enable Text="3D を有効にする"/>
+          <XRotation Text="X 回転:"/>
+          <YRotation Text="Y 回転:"/>
+          <Perspective Text="透視投影:"/>
+          <WallWidth Text="壁面の幅:"/>
+          <AxisDepth Text="軸の奥行き:"/>
+          <LightStyle Text="光源のスタイル:"/>
+          <ClusteredSeries Text="系列をクラスター化する"/>
+        </ThreeD>
+        <Axes Text="軸">
+          <Axis Text="軸:"/>
+          <CopyFromX Text="X 軸の外観をコピー"/>
+          <CopyFromPrimary Text="主軸の外観をコピー"/>
+          <Minor Text="副"/>
+          <Major Text="主"/>
+          <General Text="全般">
+            <Enabled Text="有効化"/>
+            <MarginVisible Text="余白を表示する"/>
+            <Logarithmic Text="対数目盛を表示する"/>
+            <Reversed Text="軸を反転させる"/>
+            <Interval Text="間隔"/>
+            <Interlaced Text="インターレース"/>
+            <InterlacedColor Text="インターレース色:"/>
+          </General>
+          <Labels Text="ラベル">
+            <Enabled Text="有効化"/>
+            <Angle Text="角度:"/>
+          </Labels>
+          <Title Text="タイトル"/>
+          <CustomLabels Text="ユーザー定義ラベル">
+            <Label Text="ラベル"/>
+            <Start Text="開始:"/>
+            <End Text="終了:"/>
+            <Row Text="行:"/>
+            <MarkColor Text="マークの色:"/>
+            <MarkStyle Text="マークのスタイル:"/>
+          </CustomLabels>
+          <Grid Text="グリッド">
+            <GridLine Text="グリッド線:"/>
+            <Enabled Text="有効化"/>
+          </Grid>
+          <Ticks Text="目盛">
+            <Ticks Text="目盛:"/>
+            <Enabled Text="有効化:"/>
+            <TickStyle Text="目盛のスタイル:"/>
+            <TickSize Text="目盛のサイズ:"/>
+          </Ticks>
+          <Strips Text="ストリップ">
+            <Strip Text="ストリップ"/>
+            <Interval Text="間隔">
+              <Start Text="開始:"/>
+              <Width Text="幅:"/>
+              <Interval Text="間隔:"/>
+            </Interval>
+            <Appearance Text="外観"/>
+            <Text Text="テキスト">
+              <HorizontalAlign Text="水平方向の配置:"/>
+              <VerticalAlign Text="垂直方向の配置:"/>
+              <TextOrientation Text="テキストの方向:"/>
+            </Text>
+          </Strips>
+        </Axes>
+        <Legend Text="凡例">
+          <Enabled Text="有効化"/>
+          <StyleColumn Text="列"/>
+          <StyleRow Text="行"/>
+          <StyleTable Text="表"/>
+          <General Text="全般">
+            <LegendStyle Text="凡例のスタイル:"/>
+          </General>
+          <Appearance Text="外観"/>
+        </Legend>
+        <Title Text="タイトル">
+          <Visible Text="表示する"/>
+          <General Text="全般">
+            <TextOrientation Text="テキストの方向:"/>
+            <TextStyle Text="テキストのスタイル:"/>
+          </General>
+          <Appearance Text="外観"/>
+        </Title>
+      </ChartEditorControl>
+      <SeriesEditorControl>
+        <Data Text="データ">
+          <Name Text="名前:"/>
+          <XValue Text="X 値:"/>
+          <Color Text="色:"/>
+          <Filter Text="フィルター:"/>
+          <XValueType Text="X 値の型:"/>
+          <YValueType Text="Y 値の型:"/>
+          <XAxisType Text="X 軸:"/>
+          <YAxisType Text="Y 軸:"/>
+          <PrimaryAxis Text="主軸"/>
+          <SecondaryAxis Text="第 2 軸"/>
+          <SeriesValues>
+            <YValue Text="Y 値:"/>
+            <High Text="高値:"/>
+            <Low Text="安値:"/>
+            <Open Text="始値:"/>
+            <Close Text="終値:"/>
+            <RangeBegin Text="範囲の開始:"/>
+            <RangeEnd Text="範囲の終了:"/>
+            <Size Text="サイズ:"/>
+            <YValue1 Text="Y 値 1:"/>
+            <YValue2 Text="Y 値 2:"/>
+          </SeriesValues>
+        </Data>
+        <Values Text="値"/>
+        <DataProcessing Text="データ処理">
+          <SortBy Text="並べ替え:"/>
+          <SortByX Text="X 値"/>
+          <SortByY Text="Y 値"/>
+          <SortOrder Text="並べ替え順:"/>
+          <GroupBy Text="グループ化:">
+            <None Text="なし"/>
+            <XValue Text="X 値"/>
+            <Number Text="数値"/>
+            <Years Text="年"/>
+            <Months Text="月"/>
+            <Weeks Text="週"/>
+            <Days Text="日"/>
+            <Hours Text="時間"/>
+            <Minutes Text="分"/>
+            <Seconds Text="秒"/>
+            <Milliseconds Text="ミリ秒"/>
+          </GroupBy>
+          <GroupInterval Text="グループ間隔:"/>
+          <GroupFunction Text="グループ関数:"/>
+          <CollectData Text="データの収集:">
+            <None Text="なし"/>
+            <TopN Text="上位 N"/>
+            <BottomN Text="下位 N"/>
+            <LessThan Text="指定値より小さい"/>
+            <LessThanPercent Text="指定パーセントより小さい"/>
+            <GreaterThan Text="指定値より大きい"/>
+            <GreaterThanPercent Text="指定パーセントより大きい"/>
+          </CollectData>
+          <Value Text="値:"/>
+          <CollectedText Text="収集データのテキスト:"/>
+          <CollectedColor Text="収集データの色:"/>
+          <Explode Text="分割:">
+            <None Text="なし"/>
+            <Biggest Text="最大値"/>
+            <Lowest Text="最小値"/>
+            <Specific Text="指定値"/>
+          </Explode>
+        </DataProcessing>
+        <Appearance Text="外観">
+          <Default Text="既定"/>
+          <DrawingStyle Text="描画スタイル:"/>
+          <PointWidth Text="ポイントの幅:"/>
+          <LabelsStyle Text="ラベルのスタイル:"/>
+          <DrawSideBySide Text="並べて描画する"/>
+          <ShowMarkerLines Text="マーカー線を表示する"/>
+          <DoughnutRadius Text="ドーナツの半径 (%):"/>
+          <AreaDrawingStyle Text="領域の描画スタイル:"/>
+          <Markers Text="マーカー:"/>
+          <PriceUpColor Text="上昇傾向の色:"/>
+          <ReversalAmount Text="反転値:"/>
+          <BoxSize Text="ボックス サイズ:"/>
+          <NumberOfLinesInBreak Text="区切る線の本数:"/>
+          <LabelsPlacement Text="ラベルの配置:"/>
+          <PointsGap Text="ポイントの間隔:"/>
+          <MinPointHeight Text="最小ポイントの高さ:"/>
+          <ValueType Text="値の型:"/>
+          <ThreeDDrawingStyle Text="3D 描画スタイル:"/>
+          <ThreeDRotation Text="3D 回転:"/>
+          <FunnelStyle Text="じょうごのスタイル:"/>
+          <LineTension Text="線の張りの度合い:"/>
+          <NoSettings Text="この系列の種類に特定の設定はありません。"/>
+        </Appearance>
+        <FillBorder Text="塗りつぶし &amp;&amp; 枠線">
+          <Palette Text="パレット:"/>
+        </FillBorder>
+        <Labels Text="ラベル">
+          <LabelView Text="ラベル表示:"/>
+          <Pattern Text="パターン:"/>
+        </Labels>
+        <Markers Text="マーカー">
+          <Style Text="スタイル:"/>
+          <Size Text="サイズ:"/>
+          <Step Text="ステップ:"/>
+          <Color Text="色:"/>
+        </Markers>
+      </SeriesEditorControl>
+    </ChartEditor>
+    <ChartGallery Text="ギャラリー">
+      <NewArea Text="この系列用の新しいグラフ領域を追加する"/>
+      <Categories>
+        <BarColumn Text="縦棒 &amp; 横棒"/>
+        <Area Text="面"/>
+        <Line Text="折れ線"/>
+        <PointBubble Text="ポイント &amp; バブル"/>
+        <Pie Text="円"/>
+        <Circular Text="円形"/>
+        <Financial Text="財務"/>
+        <PyramidFunnel Text="ピラミッド &amp; じょうご"/>
+        <Range Text="範囲"/>
+      </Categories>
+      <Series>
+        <Bar Text="横棒"/>
+        <StackedBar Text="積み上げ横棒"/>
+        <StackedBar100 Text="100% 積み上げ横棒"/>
+        <Column Text="縦棒"/>
+        <StackedColumn Text="積み上げ縦棒"/>
+        <StackedColumn100 Text="100% 積み上げ縦棒"/>
+        <Area Text="面"/>
+        <SplineArea Text="スプライン面"/>
+        <StackedArea Text="積み上げ面"/>
+        <StackedArea100 Text="100% 積み上げ面"/>
+        <Line Text="折れ線"/>
+        <FastLine Text="FastLine"/>
+        <StepLine Text="階段状"/>
+        <Spline Text="スプライン"/>
+        <Bubble Text="バブル"/>
+        <Point Text="ポイント"/>
+        <FastPoint Text="FastPoint"/>
+        <Pie Text="円"/>
+        <Doughnut Text="ドーナツ"/>
+        <Polar Text="極座標"/>
+        <Radar Text="レーダー"/>
+        <Stock Text="積み上げ"/>
+        <Candlestick Text="ローソク足"/>
+        <Kagi Text="かぎ足"/>
+        <Renko Text="連行足"/>
+        <PointAndFigure Text="ポイント アンド フィギュア"/>
+        <ThreeLineBreak Text="新値 3 本足"/>
+        <Pyramid Text="ピラミッド"/>
+        <Funnel Text="じょうご"/>
+        <Range Text="範囲"/>
+        <SplineRange Text="スプライン範囲"/>
+        <RangeColumn Text="範囲縦棒"/>
+        <RangeBar Text="範囲横棒"/>
+      </Series>
+    </ChartGallery>
+    <CodePageOptions Text="コード ページ">
+      <EnableVirtualSpace Text="仮想空間を有効にする"/>
+      <UseSpaces Text="スペースを使ってタブを埋める"/>
+      <AllowOutlining Text="アウトラインの実行を許可する"/>
+      <TabSize Text="タブ サイズ:"/>
+    </CodePageOptions>
+    <ConfigureBands Text="バンドの構成">
+      <Add Text="追加"/>
+      <Delete Text="削除"/>
+    </ConfigureBands>
+    <Connection Text="接続">
+      <Select Text="接続の種類の選択"/>
+      <AlwaysUse Text="常にこの接続を使用する"/>
+      <LoginPrompt Text="ログイン プロンプト"/>
+      <Test Text="接続のテスト"/>
+      <TestSuccesful Text="接続のテストに成功しました。"/>
+    </Connection>
+    <CustomLabel Text="ユーザー定義ラベル">
+      <Name Text="名前:"/>
+      <Paper Text="用紙"/>
+      <Landscape Text="横"/>
+      <PaperWidth Text="用紙の幅:"/>
+      <PaperHeight Text="用紙の高さ:"/>
+      <LeftMargin Text="左余白:"/>
+      <TopMargin Text="上余白:"/>
+      <Label Text="ラベルのパラメーター"/>
+      <LabelWidth Text="ラベルの幅:"/>
+      <LabelHeight Text="ラベルの高さ:"/>
+      <RowGap Text="行の間隔:"/>
+      <ColumnGap Text="列の間隔:"/>
+      <Warning Text="ラベルがページに収まりません。"/>
+    </CustomLabel>
+    <DataBandEditor Text="データ バンドの編集">
+      <DataSource Text="データ ソース"/>
+      <NoData Text="使用可能なデータ ソースがありません。&#13;&#10;&#13;&#10;［データ｜レポート データの選択］メニューを選んで使用可能なデータ ソースの中から選択するか、または［データ｜データ ソースの追加］メニューを使用して新しいデータ ソースを作成してください。"/>
+      <Sort Text="並べ替え"/>
+      <SortBy Text="最優先されるキー"/>
+      <ThenBy Text="次に優先されるキー"/>
+      <Ascending Text="昇順"/>
+      <Descending Text="降順"/>
+      <Filter Text="フィルター"/>
+      <Expression Text="フィルター式:"/>
+    </DataBandEditor>
+    <DataWizard Text="データ ウィザード">
+      <Page1 Text="データベースの選択"/>
+      <WhichData Text="レポートでどのデータ接続を使用してデータベースに接続しますか?"/>
+      <Hint Text="最後に使用した接続の一覧から選択するか、または［新しい接続］ボタンを押して新しい接続を作成します。"/>
+      <NewConnection Text="新しい接続..."/>
+      <EditConnection Text="接続の編集..."/>
+      <ConnectionName Text="接続名を入力してください:"/>
+      <ConnectionString Text="接続文字列"/>
+      <Page2 Text="テーブルの選択"/>
+      <WhichTables Text="レポートにどのテーブルを入れますか?"/>
+      <Wait Text="データベース情報を取得しています"/>
+      <AddQuery Text="SQL クエリの追加..."/>
+    </DataWizard>
+    <DialogPageOptions Text="ダイアログ フォーム"/>
+    <Exception Text="例外">
+      <Hint Text="レポートが以下の例外をスローしました。"/>
+      <Stack Text="スタック トレース:"/>
+      <Copy Text="クリップボードにコピー"/>
+    </Exception>
+    <ExpressionEditor Text="式の編集"/>
+    <Fill Text="塗りつぶしエディター">
+      <Solid Text="純色"/>
+      <LinearGradient Text="線形グラデーション"/>
+      <PathGradient Text="パス グラデーション"/>
+      <Hatch Text="ハッチ"/>
+      <Glass Text="ガラス"/>
+      <Colors Text="色"/>
+      <Color Text="色"/>
+      <StartColor Text="開始"/>
+      <EndColor Text="終了"/>
+      <Options Text="オプション"/>
+      <Focus Text="焦点"/>
+      <Contrast Text="コントラスト"/>
+      <Angle Text="角度"/>
+      <CenterColor Text="中心"/>
+      <EdgeColor Text="境界"/>
+      <Shape Text="形状"/>
+      <Ellipse Text="楕円"/>
+      <Rectangle Text="四角"/>
+      <ForeColor Text="前景"/>
+      <BackColor Text="背景"/>
+      <Style Text="スタイル"/>
+      <Blend Text="ブレンド"/>
+      <GlassHatch Text="ハッチを表示する"/>
+    </Fill>
+    <FormatEditor Text="書式の選択">
+      <Expression Text="式:"/>
+      <General Text="標準"/>
+      <Number Text="数値"/>
+      <Currency Text="通貨"/>
+      <Date Text="日付"/>
+      <Time Text="時刻"/>
+      <Percent Text="パーセンテージ"/>
+      <Boolean Text="ブール値"/>
+      <Custom Text="ユーザー定義"/>
+      <UseLocale Text="ロケール設定を使用する"/>
+      <DecimalDigits Text="小数点以下の桁数:"/>
+      <DecimalSeparator Text="小数点の記号:"/>
+      <GroupSeparator Text="桁区切り記号:"/>
+      <PositivePattern Text="正の値のパターン:"/>
+      <NegativePattern Text="負の値のパターン:"/>
+      <CurrencySymbol Text="通貨記号:"/>
+      <PercentSymbol Text="パーセンテージ記号:"/>
+      <FalseText Text="False 値のテキスト:"/>
+      <TrueText Text="True 値のテキスト:"/>
+    </FormatEditor>
+    <GridControlColumnsEditor Text="列の編集">
+      <Columns Text="列"/>
+      <Properties Text="プロパティ"/>
+      <Add Text="追加"/>
+      <Remove Text="削除"/>
+      <AddAll Text="すべてを追加"/>
+    </GridControlColumnsEditor>
+    <GroupBandEditor Text="グループの編集">
+      <Condition Text="グループの条件"/>
+      <Hint Text="データ列を選択するか、または式を入力してください:"/>
+      <Settings Text="設定"/>
+      <Sort Text="並べ替え"/>
+      <NoSort Text="並べ替えない"/>
+      <Ascending Text="昇順"/>
+      <Descending Text="降順"/>
+    </GroupBandEditor>
+    <GroupExpert Text="グループ エキスパート">
+      <Condition Text="グループの条件"/>
+      <Hint Text="データ列を選択するか式を入力したら、［追加］ボタンを押して新しいグループを追加します。"/>
+      <Add Text="追加"/>
+      <Groups Text="グループ"/>
+      <Edit Text="編集..."/>
+      <Delete Text="削除"/>
+    </GroupExpert>
+    <HighlightEditor Text="条件の強調表示">
+      <Conditions Text="条件"/>
+      <Add Text="追加"/>
+      <Delete Text="削除"/>
+      <Edit Text="編集"/>
+      <Style Text="スタイル"/>
+      <Fill Text="塗りつぶし"/>
+      <TextColor Text="テキストの色"/>
+      <Font Text="フォント"/>
+      <Visible Text="表示する"/>
+    </HighlightEditor>
+    <HyperlinkEditor Text="ハイパーリンクの編集">
+      <Url Text="URL"/>
+      <PageNumber Text="ページ番号"/>
+      <Bookmark Text="ブックマーク"/>
+      <Report Text="レポート"/>
+      <ReportPage Text="レポート ページ"/>
+      <Custom Text="ユーザー定義"/>
+      <UrlValue Text="URL を指定してください (例: http://www.url.com):"/>
+      <UrlExpression Text="または、URL を返す式を入力してください:"/>
+      <PageNumberValue Text="ページ番号を指定してください:"/>
+      <PageNumberExpression Text="または、ページ番号を返す式を入力してください:"/>
+      <BookmarkValue Text="ブックマーク名を指定してください:"/>
+      <BookmarkExpression Text="または、ブックマーク名を返す式を入力してください:"/>
+      <ReportName Text="レポート名:"/>
+      <ParameterName Text="レポート パラメーター:"/>
+      <ParameterValue Text="パラメーター値を指定してください:"/>
+      <ParameterExpression Text="または、パラメーター値を返す式を入力してください:"/>
+      <PageName Text="レポート ページ:"/>
+      <CustomValue Text="ハイパーリンク値を指定してください:"/>
+      <CustomExpression Text="または、値を返す式を入力してください:"/>
+      <Hint Text="プレビュー ウィンドウでこのオブジェクトをクリックした場合に起こること:"/>
+      <HintUrl Text="指定した URL が開きます。"/>
+      <HintPageNumber Text="指定したページへ移動します。"/>
+      <HintBookmark Text="指定したブックマークを含んでいるオブジェクトへ移動します。"/>
+      <HintReport Text="指定したレポートが別のプレビュー タブで開きます。"/>
+      <HintReportPage Text="指定したページが生成され、別のプレビュー タブで開きます。"/>
+      <HintCustom Text="カスタム動作を定義するには、&quot;Click&quot; イベント ハンドラーを作成する必要があります。"/>
+      <ModifyAppearance Text="クリック可能なリンクに見えるようにオブジェクトの外観を変更する"/>
+    </HyperlinkEditor>
+    <LabelWizard Text="ラベル ウィザード">
+      <Hint Text="定義済みのラベルの中から 1 つを選択するか、または［ユーザー定義ラベル］ボタンを押して、独自のラベル サイズを定義します。"/>
+      <Label Text="ラベル"/>
+      <Manufacturer Text="製造元:"/>
+      <Product Text="製品:"/>
+      <Parameters Text="パラメーター"/>
+      <Size Text="サイズ:"/>
+      <PaperSize Text="用紙サイズ:"/>
+      <Rows Text="行数:"/>
+      <Columns Text="列数:"/>
+      <CustomLabel Text="ユーザー定義ラベル..."/>
+      <Custom Text="ユーザー定義"/>
+      <Delete Text="削除"/>
+    </LabelWizard>
+    <PageSetup Text="ページ設定">
+      <Paper Text="用紙"/>
+      <Custom Text="ユーザー定義"/>
+      <Width Text="幅:"/>
+      <Height Text="高さ:"/>
+      <Orientation Text="印刷の向き:"/>
+      <Portrait Text="縦"/>
+      <Landscape Text="横"/>
+      <Margins Text="余白"/>
+      <Left Text="左:"/>
+      <Top Text="上:"/>
+      <Right Text="右:"/>
+      <Bottom Text="下:"/>
+      <MirrorMargins Text="見開きページにする"/>
+      <Source Text="給紙方法"/>
+      <FirstPage Text="先頭ページ:"/>
+      <OtherPages Text="その他のページ:"/>
+      <Columns Text="段組み"/>
+      <Count Text="段数:"/>
+      <ColumnWidth Text="幅:"/>
+      <Positions Text="位置:"/>
+      <Other Text="その他"/>
+      <Duplex Text="両面印刷:"/>
+      <DupDefault Text="既定"/>
+      <DupSimplex Text="単一"/>
+      <DupVertical Text="縦"/>
+      <DupHorizontal Text="横"/>
+      <EditWatermark Text="ウォーターマークの編集..."/>
+      <ExtraWidth Text="設計時の幅を広くする"/>
+    </PageSetup>
+    <PictureEditor Text="図の編集">
+      <Picture Text="図"/>
+      <Load Text="読み込み"/>
+      <Paste Text="貼り付け"/>
+      <Clear Text="消去"/>
+      <DataColumn Text="データ列"/>
+      <FileName Text="ファイル名"/>
+      <Url Text="ハイパーリンク"/>
+      <FileHint1 Text="ファイル名:"/>
+      <FileHint2 Text="メモ: レポートと一緒にこのファイルも配布する必要があります。"/>
+      <UrlHint Text="ハイパーリンク:"/>
+    </PictureEditor>
+    <PluginsOptions Text="プラグイン">
+      <Hint Text="インストールされている FastReport プラグインの一覧:"/>
+      <Add Text="追加"/>
+      <Remove Text="削除"/>
+      <Note Text="メモ: 加えた変更は、FastReport 再起動後に有効になります。"/>
+    </PluginsOptions>
+    <PreviewPageSetup>
+      <Apply Text="すべてのページに適用し、レポートを再構築する"/>
+    </PreviewPageSetup>
+    <PreviewSearch Text="検索"/>
+    <PrinterSetup Text="印刷">
+      <PrinterSetup Text="プリンターの設定"/>
+      <Printer Text="プリンター"/>
+      <SavePrinter Text="レポート ファイルにこのプリンターを保存する"/>
+      <Settings Text="設定..."/>
+      <PrintToFile Text="ファイルへ出力"/>
+      <PageRange Text="ページ範囲"/>
+      <All Text="すべて"/>
+      <Current Text="現在のページ"/>
+      <Numbers Text="ページ指定:"/>
+      <Hint Text="ページ番号またはページ範囲をカンマで区切って入力してください。例: 1,3,5-12"/>
+      <Copies Text="印刷部数"/>
+      <Count Text="部数:"/>
+      <Collate Text="部単位で印刷"/>
+      <Other Text="その他"/>
+      <OddEven Text="印刷対象:"/>
+      <AllPages Text="すべてのページ"/>
+      <OddPages Text="奇数ページ"/>
+      <EvenPages Text="偶数ページ"/>
+      <Order Text="ページの順序:"/>
+      <OrderDirect Text="順 (1-9)"/>
+      <OrderReverse Text="逆 (9-1)"/>
+      <Duplex Text="両面印刷:"/>
+      <Source Text="給紙方法:"/>
+      <PrintMode Text="印刷モード"/>
+      <PrintModeDefault Text="既定"/>
+      <PrintModeSplit Text="大きなページを分割"/>
+      <PrintModeScale Text="縮小"/>
+      <PrintOnSheet Text="印刷するシート:"/>
+      <PagesOnSheet Text="シートごとのページ:"/>
+      <PagesOnSheet1 Text="1 ページ"/>
+      <PagesOnSheet2 Text="2 ページ"/>
+      <PagesOnSheet4 Text="4 ページ"/>
+      <PagesOnSheet8 Text="8 ページ"/>
+      <Print Text="印刷"/>
+      <Error Text="ページ範囲が無効です。"/>
+    </PrinterSetup>
+    <QueryWizard Text="クエリ ウィザード">
+      <Page1 Text="名前の設定"/>
+      <SetName Text="クエリ オブジェクトの名前を設定します。"/>
+      <NameHint Text="この名前はデータ ウィンドウに表示されます。"/>
+      <Page2 Text="SQL ステートメントの入力"/>
+      <WhatData Text="クエリでどのようなデータを返しますか?"/>
+      <TypeSql Text="SQL ステートメントを入力するかクエリ ビルダーを使用して、クエリを構築してください。"/>
+      <QueryBuilder Text="クエリ ビルダー..."/>
+      <Page3 Text="パラメーターの定義"/>
+      <Page4 Text="列の定義"/>
+      <Refresh Text="列の更新"/>
+      <AddColumn Text="計算列の追加"/>
+      <AddParameter Text="パラメーターの追加"/>
+      <Delete Text="削除"/>
+    </QueryWizard>
+    <RelationEditor Text="関係の編集">
+      <ParentTable Text="親テーブル:"/>
+      <ChildTable Text="子テーブル:"/>
+      <Parent Text="親"/>
+      <Child Text="子"/>
+      <Columns Text="列:"/>
+      <Error Text="親と子の列数に一貫性がありません。"/>
+    </RelationEditor>
+    <ReportData Text="レポート データの選択">
+      <Hint Text="レポートで使用するデータ ソースおよびフィールドを選択してください:"/>
+      <Aliases Text="エイリアスを表示する"/>
+    </ReportData>
+    <ReportOptions Text="レポート オプション">
+      <General Text="全般"/>
+      <Description Text="説明"/>
+      <Script Text="スクリプト"/>
+      <Security Text="セキュリティ"/>
+      <Inheritance Text="継承"/>
+      <Email Text="電子メール"/>
+      <Name Text="名前:"/>
+      <Author Text="作成者:"/>
+      <Version Text="バージョン:"/>
+      <Description1 Text="説明:"/>
+      <Picture Text="図:"/>
+      <SavePreviewPicture Text="プレビューの図を保存する"/>
+      <Load Text="読み込み..."/>
+      <Clear Text="消去"/>
+      <Created Text="作成日時:"/>
+      <Modified Text="更新日時:"/>
+      <Language Text="スクリプト言語:"/>
+      <Note Text="メモ: 言語を変更すると、スクリプト全体が消去されます。"/>
+      <RefAssemblies Text="参照されるアセンブリ:"/>
+      <Add Text="追加..."/>
+      <Password Text="パスワード:"/>
+      <RetypePassword Text="パスワードの確認入力:"/>
+      <Inherited Text="このレポートは基本レポートから継承されています。"/>
+      <NotInherited Text="このレポートは継承されません。"/>
+      <Choose Text="オプションを選択してください:"/>
+      <DontChange Text="変更しない"/>
+      <Detach Text="基本レポートを切り離す"/>
+      <Inherit Text="次のレポートから継承する:"/>
+      <Browse Text="参照..."/>
+      <DoublePass Text="二重パス"/>
+      <Compress Text="レポート ファイルを圧縮する"/>
+      <UseFileCache Text="ファイル キャッシュを使用する"/>
+      <ConvertNulls Text="ヌル値を変換する"/>
+      <TextQuality Text="テキストの品質:"/>
+      <SmoothGraphics Text="グラフィックを滑らかにする"/>
+      <QualityDefault Text="既定"/>
+      <QualityRegular Text="標準"/>
+      <QualityClearType Text="ClearType"/>
+      <QualityAntiAlias Text="アンチ エイリアス"/>
+      <PasswordError Text="パスワードが一致しません。もう一度入力してください。"/>
+      <Recipients Text="宛先 (例: john@url.com):"/>
+      <Subject Text="件名:"/>
+      <Message Text="メッセージ:"/>
+    </ReportOptions>
+    <ReportPageOptions Text="レポート ページ">
+      <Units Text="ページの単位"/>
+      <Millimeters Text="ミリメートル"/>
+      <Centimeters Text="センチメートル"/>
+      <Inches Text="インチ"/>
+      <HundrethsOfInch Text="100 分の 1 インチ"/>
+      <Grid Text="グリッド"/>
+      <ShowGrid Text="グリッドを表示する"/>
+      <SnapToGrid Text="グリッドに合わせる"/>
+      <DottedGrid Text="点線グリッド"/>
+      <Size Text="スナップ サイズ:"/>
+      <Markers Text="オブジェクト マーカー"/>
+      <Rectangle Text="四角形"/>
+      <Corners Text="四隅"/>
+      <BandView Text="バンドの表示"/>
+      <Structure Text="構造"/>
+      <Classic Text="クラシック"/>
+      <EditAfterInsert Text="挿入後に編集する"/>
+    </ReportPageOptions>
+    <RichTextEditor Text="リッチ テキスト エディター">
+      <Open Text="開く"/>
+      <Save Text="保存"/>
+      <Subscript Text="下付き文字"/>
+      <Superscript Text="上付き文字"/>
+      <Bullets Text="箇条書き"/>
+      <Confirm Text="テキストは変更されています。変更を保存しますか?"/>
+    </RichTextEditor>
+    <SearchReplace Text="検索と置換">
+      <Find Text="検索する文字列:"/>
+      <Replace Text="置換後の文字列:"/>
+      <Options Text="検索オプション"/>
+      <MatchCase Text="大文字と小文字を区別する"/>
+      <MatchWholeWord Text="完全に一致する単語を検索する"/>
+      <FindNext Text="次を検索"/>
+      <ReplaceBtn Text="置換"/>
+      <ReplaceAll Text="すべて置換"/>
+      <NotFound Text="検索文字列が見つかりませんでした。"/>
+      <NoMoreFound Text="これ以上項目が見つかりません。"/>
+    </SearchReplace>
+    <SelectDataSource Text="データ ソースの選択">
+      <Hint Text="レポートで使用するデータ ソースを 1 つまたは複数選択します。"/>
+      <AvailableDs Text="使用可能なデータ ソース:"/>
+      <SelectedDs Text="選択したデータ ソース:"/>
+      <ProjectDs Text="プロジェクト データ セット"/>
+      <OtherDs Text="その他のデータ ソース"/>
+    </SelectDataSource>
+    <SelectLanguage Text="言語の選択">
+      <SelectLanguage Text="以下の一覧から言語を選択してください:"/>
+      <Auto Text="自動選択"/>
+      <Folder Text="言語ファイルがあるフォルダー:"/>
+      <SelectFolder Text="言語ファイル (*.frl) があるフォルダーを選択してください。"/>
+    </SelectLanguage>
+    <StandardReportWizard Text="標準レポート ウィザード">
+      <GroupsPage Text="グループの作成"/>
+      <CreateGroups Text="グループを作成します (任意)。"/>
+      <Groups Text="グループ:"/>
+      <LayoutPage Text="レイアウトの定義"/>
+      <DefineLayout Text="用紙の向きとデータのレイアウトを定義します。"/>
+      <Orientation Text="用紙の向き"/>
+      <Portrait Text="縦"/>
+      <Landscape Text="横"/>
+      <Layout Text="レイアウト"/>
+      <Tabular Text="表形式"/>
+      <Columnar Text="単票形式"/>
+      <StylePage Text="スタイルの選択"/>
+      <Styles Text="レポートのスタイルを選択します。"/>
+    </StandardReportWizard>
+    <StringCollectionEditor Text="文字列コレクションの編集"/>
+    <Style Text="スタイル エディター">
+      <Styles Text="スタイル"/>
+      <Add Text="追加"/>
+      <Delete Text="削除"/>
+      <Edit Text="編集"/>
+      <Load Text="読み込み..."/>
+      <Save Text="保存..."/>
+      <Settings Text="スタイル設定"/>
+      <Border Text="罫線"/>
+      <Fill Text="塗りつぶし"/>
+      <Font Text="フォント"/>
+      <TextColor Text="テキストの色"/>
+      <StyleName Text="スタイル"/>
+    </Style>
+    <TextEditor Text="テキストの編集">
+      <WordWrap Text="テキストを折り返す"/>
+    </TextEditor>
+    <TotalEditor Text="集計の編集">
+      <TotalName Text="集計の名前:"/>
+      <Total Text="集計"/>
+      <Function Text="関数:"/>
+      <DataColumnOrExpression Text="データ列または式:"/>
+      <DataBand Text="バンドの各行について評価する:"/>
+      <EvaluateCondition Text="次の条件を満たす場合に評価する:"/>
+      <PrintOn Text="出力先のバンド:"/>
+      <Options Text="オプション"/>
+      <ResetAfterPrint Text="出力後にリセットする"/>
+      <ResetRepeated Text="バンドが繰り返される場合はリセットする"/>
+      <InvisibleRows Text="不可視行を含める"/>
+      <Sum Text="合計"/>
+      <Min Text="最小値"/>
+      <Max Text="最大値"/>
+      <Avg Text="平均"/>
+      <Count Text="総数"/>
+      <Custom Text="ユーザー定義"/>
+    </TotalEditor>
+    <UIOptions Text="ユーザー インターフェイス">
+      <Appearance Text="外観:"/>
+      <AppearanceStyles Text="Visual Studio 2005,Office 2003,Office 2007 (青),Office 2007 (シルバー),Office 2007 (黒),Vista Glass"/>
+    </UIOptions>
+    <WatermarkEditor Text="ウォーターマーク">
+      <Enabled Text="有効化"/>
+      <Text Text="テキスト"/>
+      <TextItems Text="CONFIDENTIAL,COPY,ORIGINAL,SAMPLE,URGENT,極秘,コピー,原本,サンプル,緊急"/>
+      <Rotation Text="回転"/>
+      <Horizontal Text="水平方向"/>
+      <Vertical Text="垂直方向"/>
+      <ForwardDiagonal Text="右上がり"/>
+      <BackwardDiagonal Text="左上がり"/>
+      <Font Text="フォント"/>
+      <Color Text="色"/>
+      <Picture Text="画像"/>
+      <Load Text="読み込み"/>
+      <Clear Text="消去"/>
+      <Size Text="サイズ"/>
+      <Normal Text="標準"/>
+      <Center Text="中央に表示"/>
+      <Stretch Text="引き伸ばして表示"/>
+      <Zoom Text="拡大して表示"/>
+      <Tile Text="並べて表示"/>
+      <Transparency Text="透過性"/>
+      <Zorder Text="重ね順"/>
+      <TextOnTop Text="テキストが上"/>
+      <PictureOnTop Text="画像が上"/>
+      <ApplyToAll Text="すべてのページに適用"/>
+    </WatermarkEditor>
+  </Forms>
+  <ConnectionEditors>
+    <Common>
+      <Server Text="サーバー名:"/>
+      <ServerLogon Text="サーバーへのログオン"/>
+      <UserName Text="ユーザー名:"/>
+      <Password Text="パスワード:"/>
+      <Database Text="データベースへの接続"/>
+      <DatabaseName Text="データベース名:"/>
+      <DatabaseFile Text="データベース ファイル:"/>
+    </Common>
+    <MsSql>
+      <UseWindows Text="Windows 認証を使用する"/>
+      <UseSql Text="SQL Server 認証を使用する"/>
+      <SavePassword Text="パスワードを保存する"/>
+    </MsSql>
+    <OleDb>
+      <ConnectionString Text="接続文字列:"/>
+      <Build Text="ビルド..."/>
+    </OleDb>
+    <Odbc>
+      <DataSource Text="データ ソース"/>
+      <DsName Text="ユーザー名またはシステム データ ソース名を使用する:"/>
+      <ConnString Text="接続文字列を使用する:"/>
+      <Login Text="ログイン"/>
+    </Odbc>
+    <Xml>
+      <Xsd Text="スキーマ ファイル:"/>
+      <Xml Text="データ ファイル:"/>
+    </Xml>
+  </ConnectionEditors>
+  <ComponentMenu>
+    <Component>
+      <Edit Text="編集..."/>
+    </Component>
+    <ReportComponent>
+      <CanGrow Text="拡張可能"/>
+      <CanShrink Text="圧縮可能"/>
+      <GrowToBottom Text="下部まで拡張"/>
+      <Hyperlink Text="ハイパーリンク..."/>
+    </ReportComponent>
+    <BreakableComponent>
+      <CanBreak Text="分断可能"/>
+    </BreakableComponent>
+    <Band>
+      <AddChildBand Text="子バンドを追加"/>
+      <StartNewPage Text="新しいページを開始"/>
+      <PrintOnBottom Text="下部に出力"/>
+    </Band>
+    <DataBand>
+      <AddDetailDataBand Text="詳細データ バンドを追加"/>
+      <KeepTogether Text="同一ページに出力"/>
+      <KeepDetail Text="詳細と一緒に出力"/>
+    </DataBand>
+    <HeaderBand>
+      <RepeatOnEveryPage Text="ページごとに繰り返す"/>
+      <KeepWithData Text="データと分離しない"/>
+    </HeaderBand>
+    <GroupHeaderBand>
+      <ResetPageNumber Text="ページ番号をリセット"/>
+    </GroupHeaderBand>
+    <ChildBand>
+      <FillUnusedSpace Text="未使用の空間を埋める"/>
+      <CompleteToNRows Text="最大 N データ行まで満たす:"/>
+    </ChildBand>
+    <PictureObject>
+      <SizeMode Text="サイズ モード"/>
+      <AutoSize Text="自動サイズ調整"/>
+      <CenterImage Text="イメージを真中に置く"/>
+      <Normal Text="標準"/>
+      <StretchImage Text="イメージを引き伸ばす"/>
+      <Zoom Text="拡大"/>
+    </PictureObject>
+    <TextObject>
+      <Format Text="書式..."/>
+      <Clear Text="クリア"/>
+      <AutoWidth Text="幅を自動調整"/>
+      <WordWrap Text="折り返し"/>
+      <AllowExpressions Text="式を許可"/>
+    </TextObject>
+    <SubreportObject>
+      <PrintOnParent Text="親に出力"/>
+    </SubreportObject>
+    <TableObject>
+      <RepeatHeaders Text="各ページにヘッダーを出力"/>
+    </TableObject>
+    <TableRow>
+      <InsertAbove Text="上に行を挿入"/>
+      <InsertBelow Text="下に行を挿入"/>
+      <AutoSize Text="自動サイズ調整"/>
+    </TableRow>
+    <TableColumn>
+      <InsertToLeft Text="左に列を挿入"/>
+      <InsertToRight Text="右に列を挿入"/>
+    </TableColumn>
+    <TableCell>
+      <Join Text="セルの結合"/>
+      <Split Text="セル結合の解除"/>
+    </TableCell>
+    <MatrixObject>
+      <CellsSideBySide Text="セルを横に並べる"/>
+      <ShowTitle Text="タイトルを表示"/>
+      <Style Text="スタイル"/>
+    </MatrixObject>
+    <MatrixCell>
+      <Totals Text="集計"/>
+      <Function Text="関数"/>
+      <SuppressTotals Text="集計を抑制"/>
+      <TotalsFirst Text="集計を最初に出力"/>
+      <Percent Text="パーセンテージ"/>
+      <PercentColumnTotal Text="列の集計の %"/>
+      <PercentRowTotal Text="行の集計の %"/>
+      <PercentGrandTotal Text="総計の %"/>
+    </MatrixCell>
+    <GridControl>
+      <EditColumns Text="列の編集..."/>
+    </GridControl>
+    <Barcode>
+      <BarcodeType Text="バーコードの種類"/>
+      <AutoSize Text="自動サイズ調整"/>
+      <AutoEncode Text="自動エンコード"/>
+      <CalcChecksum Text="チェックサムを計算"/>
+      <ShowText Text="テキストを表示"/>
+    </Barcode>
+    <ZipCodeObject>
+      <ShowMarkers Text="マーカーを表示"/>
+      <ShowGrid Text="グリッドを表示"/>
+    </ZipCodeObject>
+  </ComponentMenu>
+  <ComponentsMisc>
+    <Table>
+      <CalcBounds Text="境界を計算しています..."/>
+    </Table>
+    <Matrix>
+      <FillData Text="行列を埋めています..."/>
+      <NewColumn Text="新しい列を作成するには、&#13;&#10;ここにデータをドラッグします"/>
+      <NewRow Text="新しい行を作成するには、&#13;&#10;ここにデータをドラッグします"/>
+      <NewCell Text="新しいセルを作成するには、&#13;&#10;ここにデータをドラッグします"/>
+      <Total Text="集計"/>
+      <Title Text="タイトル"/>
+      <White Text="白"/>
+      <Gray Text="灰色"/>
+      <Orange Text="オレンジ"/>
+      <Green Text="緑"/>
+      <GreenOrange Text="緑とオレンジ"/>
+      <Blue Text="青"/>
+      <BlueWhite Text="青と白"/>
+      <GrayOrange Text="灰色とオレンジ"/>
+      <BlueOrange Text="青とオレンジ"/>
+      <OrangeWhite Text="オレンジと白"/>
+    </Matrix>
+  </ComponentsMisc>
+  <Wizards>
+    <BlankReport Text="空白レポート"/>
+    <StandardReport Text="標準レポート ウィザード"/>
+    <InheritedReport Text="継承レポート"/>
+    <Label Text="ラベル ウィザード"/>
+    <NewDataSource Text="新しいデータ ソース"/>
+    <NewPage Text="新しいレポート ページ"/>
+    <NewDialog Text="新しいダイアログ フォーム"/>
+  </Wizards>
+  <Export>
+    <Misc>
+      <Performance Text="エクスポート時間: {0} ミリ秒"/>
+      <OrderByCells Text="セルの順序"/>
+      <AnalyzeObjects Text="オブジェクトの分析"/>
+      <SavePage Text="ページの保存"/>
+      <Wysiwyg Text="WYSIWYG"/>
+      <PageBreaks Text="改ページ"/>
+      <OpenAfterExport Text="エクスポート後に開く"/>
+      <Pictures Text="画像"/>
+      <Options Text="オプション"/>
+      <None Text="なし"/>
+      <Metafile Text="メタファイル"/>
+      <SaveFile Text="ファイルの保存"/>
+      <TableBased Text="表"/>
+      <LayerBased Text="レイヤー"/>
+    </Misc>
+    <Image Text="イメージへのエクスポート">
+      <File Text="イメージ ファイル"/>
+      <ImageFormat Text="形式:"/>
+      <Resolution Text="解像度:"/>
+      <Quality Text="JPEG 画質:"/>
+      <SeparateFiles Text="ページごとでファイルを分ける"/>
+      <MultiFrame Text="マルチフレーム TIFF"/>
+      <Monochrome Text="モノクロ TIFF"/>
+      <Bmp Text="ビットマップ イメージ"/>
+      <Png Text="PNG イメージ"/>
+      <Jpeg Text="JPG イメージ"/>
+      <Gif Text="GIF イメージ"/>
+      <Tiff Text="TIFF イメージ"/>
+      <Metafile Text="Windows メタファイル"/>
+    </Image>
+    <RichText Text="リッチ テキストへのエクスポート">
+      <File Text="リッチ テキスト ファイル"/>
+    </RichText>
+    <Text Text="テキスト/ドット プリンターへのエクスポート">
+      <File Text="テキスト ファイル/ドット プリンター"/>
+      <EmptyLines Text="空行"/>
+      <DataOnly Text="データのみ"/>
+      <Frames Text="枠線"/>
+      <FramesNone Text="なし"/>
+      <FramesText Text="テキスト"/>
+      <FramesGraphic Text="グラフィック"/>
+      <Codepage Text="コード ページ"/>
+      <Default Text="既定"/>
+      <Unicode Text="Unicode"/>
+      <OEM Text="OEM"/>
+      <ScaleX Text="目盛 X:"/>
+      <ScaleY Text="目盛 Y:"/>
+      <AutoScale Text="自動目盛"/>
+      <PrinterType Text="プリンターの種類"/>
+      <Commands Text="コマンド"/>
+      <PageWidth Text="ページの幅:"/>
+      <PageHeight Text="ページの高さ:"/>
+      <DataLoss Text="データ損失の可能性&#13;&#10;目盛 X/Y を増やしてください"/>
+      <ScaleMessage Text="最適目盛の計算"/>
+      <Scale Text="目盛"/>
+    </Text>
+    <Csv Text="CSV へのエクスポート">
+      <File Text="CSV ファイル"/>
+      <Separator Text="区切り記号"/>
+      <Codepage Text="コード ページ"/>
+      <Default Text="既定"/>
+      <Unicode Text="Unicode"/>
+      <OEM Text="OEM"/>
+      <DataOnly Text="データのみ"/>
+    </Csv>
+    <Dbf Text="DBF へのエクスポート">
+      <File Text="DBF テーブル"/>
+      <Codepage Text="コード ページ"/>
+      <Default Text="既定"/>
+      <OEM Text="OEM"/>
+      <DataOnly Text="データのみ"/>
+      <FieldNames Text="フィールド名 (例: Field1;Field2):"/>
+    </Dbf>
+    <Xml Text="XML へのエクスポート">
+      <File Text="XML (Excel) テーブル"/>
+    </Xml>
+    <Odt Text="Open Office Writer へのエクスポート">
+      <File Text="OpenOffice Writer"/>
+    </Odt>
+    <Ods Text="Open Office Calc へのエクスポート">
+      <File Text="OpenOffice Calc"/>
+    </Ods>
+    <Xlsx Text="Excel 2007 へのエクスポート">
+      <File Text="Excel 2007 ファイル"/>
+    </Xlsx>
+    <Pptx Text="PowerPoint 2007 へのエクスポート">
+      <File Text="PowerPoint 2007 ファイル"/>
+    </Pptx>
+    <Docx Text="Microsoft Word 2007 へのエクスポート">
+      <File Text="Microsoft Word 2007 ファイル"/>
+    </Docx>
+    <Xps Text="XPS へのエクスポート">
+      <File Text="Microsoft XPS ファイル"/>
+    </Xps>
+    <Pdf Text="PDF へのエクスポート">
+      <File Text="Adobe Acrobat"/>
+      <Export Text="エクスポート"/>
+      <Compressed Text="圧縮"/>
+      <EmbeddedFonts Text="埋め込みフォント"/>
+      <Background Text="バックグラウンド"/>
+      <PrintOptimized Text="印刷に最適化"/>
+      <Information Text="情報"/>
+      <DocumentInformation Text="ドキュメント情報"/>
+      <Title Text="タイトル"/>
+      <Author Text="作成者"/>
+      <Subject Text="サブタイトル"/>
+      <Keywords Text="キーワード"/>
+      <Creator Text="製作者"/>
+      <Producer Text="アプリケーション"/>
+      <Security Text="セキュリティ"/>
+      <Authentification Text="認証"/>
+      <OwnerPassword Text="所有者パスワード"/>
+      <UserPassword Text="ユーザー パスワード"/>
+      <Permissions Text="アクセス許可"/>
+      <PrintTheDocument Text="ドキュメントの印刷"/>
+      <ModifyTheDocument Text="ドキュメントの変更"/>
+      <CopyOfTextAndGraphics Text="テキストとグラフィックのコピー"/>
+      <AddOrModifyTextAnnotations Text="テキスト注釈の追加と変更"/>
+      <Viewer Text="ビューアー"/>
+      <ViewerPreferences Text="ビューアーの設定"/>
+      <HideToolbar Text="ツール バーを表示しない"/>
+      <HideMenubar Text="メニュー バーを表示しない"/>
+      <HideWindowUserInterface Text="ウィンドウ ユーザー インターフェイスを表示しない"/>
+      <FitWindow Text="ページにウィンドウ サイズを合わせる"/>
+      <CenterWindow Text="ウィンドウを画面中央に配置"/>
+      <PrintScaling Text="印刷の拡大縮小"/>
+      <PrintAfterOpenOfDocument Text="ドキュメントを開いた後に印刷"/>
+      <Outline Text="アウトライン"/>
+    </Pdf>
+    <Html Text="HTML へのエクスポート">
+      <File Text="HTML ファイル"/>
+      <MHTFile Text="MHT ファイル"/>
+      <Format Text="書式"/>
+      <SinglePage Text="単一ページ"/>
+      <SubFolder Text="サブフォルダー"/>
+      <Navigator Text="ナビゲーター"/>
+      <Layers Text="レイヤー"/>
+      <Total Text="合計"/>
+      <First Text="&lt;&lt;"/>
+      <Last Text="&gt;&gt;"/>
+      <Prev Text="&lt;"/>
+      <Next Text="&gt;"/>
+    </Html>
+    <Mht Text="MHT (Web アーカイブ) へのエクスポート">
+      <File Text="MHT ファイル (Web アーカイブ)"/>
+    </Mht>
+    <Email Text="電子メールの送信">
+      <Email Text="電子メール"/>
+      <Account Text="アカウント"/>
+      <Address Text="アドレス:"/>
+      <Subject Text="件名:"/>
+      <Message Text="メッセージ:"/>
+      <Attachment Text="添付ファイル:"/>
+      <Settings Text="設定..."/>
+      <Name Text="名前:"/>
+      <Template Text="テンプレート:"/>
+      <Host Text="ホスト:"/>
+      <Port Text="ポート:"/>
+      <UserName Text="ユーザー名:"/>
+      <Password Text="パスワード:"/>
+      <AddressError Text="アドレスは空にできません。"/>
+      <HostError Text="ホストは空にできません。"/>
+      <SendingEmail Text="電子メールを送信しています - {0} Kb"/>
+      <EnableSSL Text="SSL を有効にする"/>
+    </Email>
+  </Export>
+  <Web>
+    <Print Text="印刷"/>
+    <Export Text="エクスポート"/>
+    <Zoom Text="ズーム"/>
+    <Refresh Text="更新"/>
+  </Web>
+  <Properties>
+    <Categories>
+      <Appearance Text="外観"/>
+      <Behavior Text="動作"/>
+      <Build Text="ビルド"/>
+      <Data Text="データ"/>
+      <Design Text="デザイン"/>
+      <Email Text="電子メール"/>
+      <Engine Text="エンジン"/>
+      <Events Text="イベント"/>
+      <Hierarchy Text="階層"/>
+      <Layout Text="レイアウト"/>
+      <Misc Text="その他"/>
+      <Navigation Text="ナビゲーション"/>
+      <Paper Text="用紙"/>
+      <Preview Text="プレビュー"/>
+      <Print Text="印刷"/>
+      <Script Text="スクリプト"/>
+    </Categories>
+  </Properties>
+</Language>
