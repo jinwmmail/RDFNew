@@ -10,22 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FineUI.Examples", "_FineUI.Examples\FineUI.Examples.csproj", "{CF702D32-2B3C-4FE7-8916-4C09DBF30289}"
 EndProject
 Global
-	GlobalSection(SourceCodeControl) = preSolution
-		SccNumberOfProjects = 5
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = RDFNew.Module\\RDFNew.Module.csproj
-		SccLocalPath1 = .
-		SccProjectFilePathRelativizedFromConnection1 = RDFNew.Module\\
-		SccProjectUniqueName2 = RDFNew.Web\\RDFNew.Web.csproj
-		SccLocalPath2 = .
-		SccProjectFilePathRelativizedFromConnection2 = RDFNew.Web\\
-		SccProjectUniqueName3 = _FineUI\\FineUI.csproj
-		SccLocalPath3 = .
-		SccProjectFilePathRelativizedFromConnection3 = _FineUI\\
-		SccProjectUniqueName4 = _FineUI.Examples\\FineUI.Examples.csproj
-		SccLocalPath4 = .
-		SccProjectFilePathRelativizedFromConnection4 = _FineUI.Examples\\
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
